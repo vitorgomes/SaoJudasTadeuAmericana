@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: Change the name of the screen to something like HomeView or MainView
 struct ContentView: View {
     var body: some View {
         List {
