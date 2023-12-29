@@ -12,6 +12,8 @@
 		E771C0752B3716D100C5246F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771C0742B3716D100C5246F /* ContentView.swift */; };
 		E771C0772B3716D300C5246F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E771C0762B3716D300C5246F /* Assets.xcassets */; };
 		E771C07A2B3716D300C5246F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E771C0792B3716D300C5246F /* Preview Assets.xcassets */; };
+		E7BAF8F22B3E2A9B00DB6F21 /* SjtHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF8F12B3E2A9B00DB6F21 /* SjtHistoryView.swift */; };
+		E7BAF8F42B3E45C900DB6F21 /* PrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		E771C0742B3716D100C5246F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E771C0762B3716D300C5246F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E771C0792B3716D300C5246F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7BAF8F12B3E2A9B00DB6F21 /* SjtHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SjtHistoryView.swift; sourceTree = "<group>"; };
+		E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 				E771C0722B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift */,
 				E771C0742B3716D100C5246F /* ContentView.swift */,
 				E71603F62B3CE917000E30F8 /* AboutView.swift */,
+				E7BAF8F12B3E2A9B00DB6F21 /* SjtHistoryView.swift */,
+				E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */,
 				E771C0762B3716D300C5246F /* Assets.xcassets */,
 				E771C0782B3716D300C5246F /* Preview Content */,
 			);
@@ -140,7 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7BAF8F42B3E45C900DB6F21 /* PrayersView.swift in Sources */,
 				E771C0752B3716D100C5246F /* ContentView.swift in Sources */,
+				E7BAF8F22B3E2A9B00DB6F21 /* SjtHistoryView.swift in Sources */,
 				E71603F72B3CE917000E30F8 /* AboutView.swift in Sources */,
 				E771C0732B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift in Sources */,
 			);
