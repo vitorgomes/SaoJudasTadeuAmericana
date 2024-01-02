@@ -29,16 +29,18 @@ struct TitheView: View {
             HStack {
                 Text("Pix:")
                 Text("(19) 99999-9999")
+                
                 Button {
                     // TODO: Add action to copy the Pix address to the clipboard
                 } label: {
                     Image(systemName: "square.and.arrow.up")
-                        .foregroundColor(.black) // TODO: Remove later, just for test purposes
+                        .foregroundColor(.black)
                 }
-            } .border(Color.black)
-            
+            } .frame(maxWidth: 300) // TODO: Make this HStack same width as QRCode image but dynamically
+                
+            // TODO: Review de aligment of these two TextViews, if should use one line or two separated lines
             Text("Outro tipo de doação?")
-            Text("Entre em contato via WhatsApp")
+            Text(" Entre em contato via WhatsApp")
             Button {
                 // TODO: Add action to copy the Pix address to the clipboard
             } label: {
@@ -46,10 +48,10 @@ struct TitheView: View {
                     .resizable()
                     .scaledToFill()
                     .clipShape(Circle())
-                    .frame(width: 100, height: 100)
+                    .frame(width: 100, height: 100, alignment: .center)
             }
             
-        } .fixedSize(horizontal: true, vertical: false) // TODO: Review. Need to make the HStack above the same width of the QR Code image
+        } //.fixedSize(horizontal: true, vertical: false) // TODO: Review. Need to make the HStack above the same width of the QR Code image
     }
 }
 

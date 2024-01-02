@@ -11,15 +11,16 @@ import SwiftUI
 struct PrayersView: View {
     
     let screenSize = UIScreen.main.bounds
-    @State var ongoingNovena = true // Remember to set default value to false, only true because it is cool to show others
+    @State var ongoingNovena = false // Remember to set default value to false, only true because it is cool to show others
     
     var body: some View {
         VStack { // TODO: Add font styles
+            // TODO: Add maxWidth too
             VStack(alignment: .leading) { // TODO: Create a function to reduce copied code
                 // TODO: Add spacing between these both TextViews
                 Text("Orações")
                     .font(.title)
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit") // TODO: Replace Lorem Ipsum text
+                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit") // TODO: Replace Lorem Ipsum text with a explanation of the button
             }.frame(maxHeight: screenSize.height * 0.25) // TODO: Test height later when introduce NavigationStack
             .border(Color.black)
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous)) // TODO: Investigate why corners are cutting the border
