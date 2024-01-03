@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E7122B5C2B44A04E00067632 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7122B5B2B44A04E00067632 /* SettingsView.swift */; };
 		E71603F72B3CE917000E30F8 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71603F62B3CE917000E30F8 /* AboutView.swift */; };
+		E71D1DD42B45C47D00F55AF4 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */; };
 		E771C0732B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771C0722B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift */; };
 		E771C0752B3716D100C5246F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771C0742B3716D100C5246F /* ContentView.swift */; };
 		E771C0772B3716D300C5246F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E771C0762B3716D300C5246F /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		E7122B5B2B44A04E00067632 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E71603F62B3CE917000E30F8 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
 		E771C06F2B3716D100C5246F /* Sao Judas Tadeu Americana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sao Judas Tadeu Americana.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E771C0722B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sao_Judas_Tadeu_AmericanaApp.swift; sourceTree = "<group>"; };
 		E771C0742B3716D100C5246F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */,
 				E7A396F42B3F67D300A3ADE7 /* TitheView.swift */,
 				E7122B5B2B44A04E00067632 /* SettingsView.swift */,
+				E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */,
 				E771C0762B3716D300C5246F /* Assets.xcassets */,
 				E771C0782B3716D300C5246F /* Preview Content */,
 			);
@@ -158,6 +161,7 @@
 				E771C0752B3716D100C5246F /* ContentView.swift in Sources */,
 				E7BAF8F22B3E2A9B00DB6F21 /* SjtHistoryView.swift in Sources */,
 				E71603F72B3CE917000E30F8 /* AboutView.swift in Sources */,
+				E71D1DD42B45C47D00F55AF4 /* SuggestionsView.swift in Sources */,
 				E771C0732B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

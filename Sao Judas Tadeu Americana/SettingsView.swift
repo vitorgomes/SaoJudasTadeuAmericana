@@ -24,7 +24,7 @@ struct SettingsView: View {
                     +
                     Text("Troque o tema de cores")
                         .fontWeight(.light)
-                } .multilineTextAlignment(.leading)
+                } .multilineTextAlignment(.leading) // TODO: Verify if it only works on iOS 16
                     .padding()
             }.frame(maxWidth: screenSize.width * 0.85, maxHeight: screenSize.height * 0.25, alignment: .leading)
             .foregroundColor(.black)
@@ -64,7 +64,7 @@ struct SettingsView: View {
                 // TODO: Add action to when tapped send to About the App screen
             } label: {
                 Group {
-                    Text("Sugestões e Avaliações\n")
+                    Text("Sugestões\n")
                         .font(.title)
                     +
                     Text("Compartilhe sua opinião")

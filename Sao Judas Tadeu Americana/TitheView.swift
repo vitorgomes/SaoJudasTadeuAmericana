@@ -28,7 +28,7 @@ struct TitheView: View {
             
             HStack {
                 Text("Pix:")
-                Text("(19) 99999-9999")
+                Text("(19) 99999-9999") // TODO: Maybe make the full line a button so the person can tap wherever he/she want
                 
                 Button {
                     // TODO: Add action to copy the Pix address to the clipboard
