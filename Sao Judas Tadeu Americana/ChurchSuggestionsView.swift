@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChurchSuggestionsView: View {
-    // TODO: Slipt "Catequese" and "Crisma"
+    // TODO: Can reuse this screen for App Suggestions
     var subjects = ["Igreja", "Missa", "Catequese", "Crisma",  "Eventos", "Outros"]
     let screenSize = UIScreen.main.bounds
     
