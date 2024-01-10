@@ -44,7 +44,7 @@ struct AboutView: View {
                 .frame(width: 300, height: 200, alignment: .center) // TODO: Edit fixed size
                 // TODO: Add a custom pin for the map
             }
-        }
+        }// .scrollContentBackground(.hidden) // TODO: Test it later
     }
 }
 
