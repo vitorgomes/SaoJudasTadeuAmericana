@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChurchSuggestionsView: View {
-    // TODO: Can reuse this screen for App Suggestions
+    // TODO: Can reuse this screen for App Suggestions. If so, file name must be renamed
     var subjects = ["Igreja", "Missa", "Catequese", "Crisma",  "Eventos", "Outros"]
     let screenSize = UIScreen.main.bounds
     

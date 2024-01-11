@@ -13,8 +13,9 @@
 		E71757342B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71757332B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift */; };
 		E71D1DD42B45C47D00F55AF4 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */; };
 		E71D1DD62B45FB8600F55AF4 /* ChurchSuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D1DD52B45FB8600F55AF4 /* ChurchSuggestionsView.swift */; };
+		E74489CD2B5083ED00039B0C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74489CC2B5083ED00039B0C /* MainView.swift */; };
 		E771C0732B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771C0722B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift */; };
-		E771C0752B3716D100C5246F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771C0742B3716D100C5246F /* ContentView.swift */; };
+		E771C0752B3716D100C5246F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771C0742B3716D100C5246F /* HomeView.swift */; };
 		E771C0772B3716D300C5246F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E771C0762B3716D300C5246F /* Assets.xcassets */; };
 		E771C07A2B3716D300C5246F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E771C0792B3716D300C5246F /* Preview Assets.xcassets */; };
 		E7A396F52B3F67D300A3ADE7 /* TitheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A396F42B3F67D300A3ADE7 /* TitheView.swift */; };
@@ -29,9 +30,10 @@
 		E71757332B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
 		E71D1DD52B45FB8600F55AF4 /* ChurchSuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchSuggestionsView.swift; sourceTree = "<group>"; };
+		E74489CC2B5083ED00039B0C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E771C06F2B3716D100C5246F /* Sao Judas Tadeu Americana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sao Judas Tadeu Americana.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E771C0722B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sao_Judas_Tadeu_AmericanaApp.swift; sourceTree = "<group>"; };
-		E771C0742B3716D100C5246F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E771C0742B3716D100C5246F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E771C0762B3716D300C5246F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E771C0792B3716D300C5246F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7A396F42B3F67D300A3ADE7 /* TitheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitheView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E74489C62B50795400039B0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E74489CC2B5083ED00039B0C /* MainView.swift */,
+				E74489C82B5079D200039B0C /* HomeViews */,
+				E74489C92B507A1F00039B0C /* PrayersViews */,
+				E74489CA2B507A4000039B0C /* TitheViews */,
+				E74489CB2B507A7100039B0C /* SettingsViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E74489C72B50796500039B0C /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				E71757332B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		E74489C82B5079D200039B0C /* HomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				E771C0742B3716D100C5246F /* HomeView.swift */,
+				E71603F62B3CE917000E30F8 /* AboutView.swift */,
+				E7BAF8F12B3E2A9B00DB6F21 /* SjtHistoryView.swift */,
+			);
+			path = HomeViews;
+			sourceTree = "<group>";
+		};
+		E74489C92B507A1F00039B0C /* PrayersViews */ = {
+			isa = PBXGroup;
+			children = (
+				E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */,
+				E71757312B48C7A9005D9A20 /* NovenaView.swift */,
+			);
+			path = PrayersViews;
+			sourceTree = "<group>";
+		};
+		E74489CA2B507A4000039B0C /* TitheViews */ = {
+			isa = PBXGroup;
+			children = (
+				E7A396F42B3F67D300A3ADE7 /* TitheView.swift */,
+			);
+			path = TitheViews;
+			sourceTree = "<group>";
+		};
+		E74489CB2B507A7100039B0C /* SettingsViews */ = {
+			isa = PBXGroup;
+			children = (
+				E7122B5B2B44A04E00067632 /* SettingsView.swift */,
+				E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */,
+				E71D1DD52B45FB8600F55AF4 /* ChurchSuggestionsView.swift */,
+			);
+			path = SettingsViews;
+			sourceTree = "<group>";
+		};
 		E771C0662B3716D100C5246F = {
 			isa = PBXGroup;
 			children = (
@@ -70,16 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				E771C0722B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift */,
-				E771C0742B3716D100C5246F /* ContentView.swift */,
-				E71603F62B3CE917000E30F8 /* AboutView.swift */,
-				E7BAF8F12B3E2A9B00DB6F21 /* SjtHistoryView.swift */,
-				E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */,
-				E7A396F42B3F67D300A3ADE7 /* TitheView.swift */,
-				E7122B5B2B44A04E00067632 /* SettingsView.swift */,
-				E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */,
-				E71D1DD52B45FB8600F55AF4 /* ChurchSuggestionsView.swift */,
-				E71757312B48C7A9005D9A20 /* NovenaView.swift */,
-				E71757332B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift */,
+				E74489C62B50795400039B0C /* Views */,
+				E74489C72B50796500039B0C /* Style */,
 				E771C0762B3716D300C5246F /* Assets.xcassets */,
 				E771C0782B3716D300C5246F /* Preview Content */,
 			);
@@ -165,10 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7122B5C2B44A04E00067632 /* SettingsView.swift in Sources */,
+				E74489CD2B5083ED00039B0C /* MainView.swift in Sources */,
 				E7BAF8F42B3E45C900DB6F21 /* PrayersView.swift in Sources */,
 				E7A396F52B3F67D300A3ADE7 /* TitheView.swift in Sources */,
 				E71757322B48C7AA005D9A20 /* NovenaView.swift in Sources */,
-				E771C0752B3716D100C5246F /* ContentView.swift in Sources */,
+				E771C0752B3716D100C5246F /* HomeView.swift in Sources */,
 				E71D1DD62B45FB8600F55AF4 /* ChurchSuggestionsView.swift in Sources */,
 				E7BAF8F22B3E2A9B00DB6F21 /* SjtHistoryView.swift in Sources */,
 				E71603F72B3CE917000E30F8 /* AboutView.swift in Sources */,

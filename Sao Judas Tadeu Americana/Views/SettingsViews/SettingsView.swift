@@ -97,6 +97,7 @@ struct SettingsView: View {
             .foregroundColor(.black)
             .border(Color.black)
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+            .padding(.bottom, 8) // TODO: Testing with TabView. Review the size and compare with the other buttons, it seems that button shrink a little compared to others when using padding
             .overlay(alignment: .topTrailing) {
                 Image(systemName: "questionmark")
                     .padding()

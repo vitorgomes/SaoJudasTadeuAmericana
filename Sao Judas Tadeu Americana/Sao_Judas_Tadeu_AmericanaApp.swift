@@ -11,7 +11,7 @@ import SwiftUI
 struct Sao_Judas_Tadeu_AmericanaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
