@@ -51,9 +51,21 @@ struct SjtHistoryView: View {
                     .frame(width: 100, height: 100)
             }
         }
+            .navigationTitle("História")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        // TODO: Add the action to share the text of SJT History
+                    } label: {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                }
+            }
     }
 }
 
 #Preview {
-    SjtHistoryView()
+    NavigationStack {
+        SjtHistoryView()
+    }
 }
