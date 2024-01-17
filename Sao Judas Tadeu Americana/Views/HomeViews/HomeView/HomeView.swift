@@ -9,11 +9,12 @@ import SwiftUI
 
 // TODO: Change the name of the screen to something like HomeView or MainView
 struct HomeView: View {
+    
     var body: some View {
         // TODO: I believe the List is ignoring safe area, need to check this
         List {
             HStack(alignment: .center, spacing: 20) {
-                Image("sjtFace")
+                Image("sjtFace") // TODO: Need to polish the image
                     .resizable()
                     .scaledToFill()
                     .clipShape(Circle())

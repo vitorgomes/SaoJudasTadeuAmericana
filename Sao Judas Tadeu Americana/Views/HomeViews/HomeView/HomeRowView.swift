@@ -11,13 +11,14 @@ struct HomeRowView: View {
     
     var homeRowText: HomeRowText
     
+    let oioi = SjtHistoryView()
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text(homeRowText.title)
                 .font(.title)
             NavigationLink(destination: SjtHistoryView()) { // TODO: Need to refactor here too, because both Views are sending to SjtHistoryView()
                 Text(homeRowText.content) // TODO: Add a fix number of allowed characters to display in the screen.
-                // TODO: Add a thin text like "Tap to see more" indicating the person to tap and redirect to another screen with the full text
                 // TODO: Remove the Lorem ipsum with the real text
                 +
                 Text(HomeConstants.continueReading)

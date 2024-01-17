@@ -11,7 +11,8 @@ import SwiftUI
 struct PrayersView: View {
     
     let screenSize = UIScreen.main.bounds
-    @State var ongoingNovena = false // Remember to set default value to false, only true because it is cool to show others
+    @State private var ongoingNovena = false // Remember to set default value to false, only true because it is cool to show others
+        // Testing variable as private
     
     var body: some View {
         VStack { // TODO: Add font styles

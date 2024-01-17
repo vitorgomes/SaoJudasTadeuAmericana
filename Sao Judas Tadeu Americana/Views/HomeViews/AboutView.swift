@@ -44,6 +44,7 @@ struct AboutView: View {
             }
         }// .scrollContentBackground(.hidden) // TODO: Test it later
             .navigationTitle("Sobre")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {

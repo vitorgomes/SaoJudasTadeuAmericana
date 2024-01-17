@@ -52,6 +52,7 @@ struct SjtHistoryView: View {
             }
         }
             .navigationTitle("História")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {

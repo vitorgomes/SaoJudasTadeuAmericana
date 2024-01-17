@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct HomeRowText: Identifiable {
     var id = UUID()
@@ -14,6 +15,6 @@ struct HomeRowText: Identifiable {
 }
 
 var rowTexts = [
-    HomeRowText(title: HomeConstants.sjtHistoryTitle, content: HomeConstants.sjtHistoryContent + HomeConstants.threeDots),
-    HomeRowText(title: HomeConstants.churchAboutTitle, content: HomeConstants.churchAboutContent + HomeConstants.threeDots)
+    HomeRowText(title: "História de São Judas Tadeu", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in risus ut dui congue venenatis. Maecenas viverra a lectus vitae molestie. Aliquam aliquet vestibulum congue. Aliquam eu elit quis sem commodo tristique sit amet quis quam. Donec tincidunt magna risus, ac cursus massa placerat eu" + HomeConstants.threeDots),
+    HomeRowText(title: "Sobre a Paróquia", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in risus ut dui congue venenatis. Maecenas viverra a lectus vitae molestie. Aliquam aliquet vestibulum congue. Aliquam eu elit quis sem commodo tristique sit amet quis quam. Donec tincidunt magna risus, ac cursus massa placerat eu" + HomeConstants.threeDots)
 ]
