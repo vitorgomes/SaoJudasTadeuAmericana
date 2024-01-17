@@ -20,21 +20,21 @@ struct AboutView: View {
                     Image("instagramLogo")
                         .resizable()
                         .scaledToFill()
-                        .clipShape(Circle())
-                        .frame(width: 100, height: 100)
+                        //.clipShape(Circle())
+                        .frame(width: 70, height: 70)
                     Image("whatsappLogo")
                         // TODO: Create a function to replace all copied code
                         .resizable()
                         .scaledToFill()
                         .clipShape(Circle())
-                        .frame(width: 100, height: 100)
+                        .frame(width: 70, height: 70)
                     Image("facebookLogo")
                     // TODO: Create a function to replace all copied code
                         .resizable()
                         .scaledToFill()
                         .clipShape(Circle())
-                        .frame(width: 100, height: 100)
-                }.background(Color.brown) // TODO: Decide a background color for the entire app
+                        .frame(width: 70, height: 70)
+                }//.background(Color.brown) // TODO: Decide a background color for the entire app
             
                 Map() {
                     Marker("Paróquia São Judas Tadeu", coordinate: CLLocationCoordinate2D(latitude: -22.750035511019487, longitude: -47.358945254521316))
