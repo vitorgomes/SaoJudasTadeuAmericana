@@ -29,7 +29,7 @@ struct HomeView: View {
                 HomeRowView(homeRowText: item)
             }
         }
-            .navigationTitle("Início")
+            //.navigationTitle("Início")
     }
 }
 

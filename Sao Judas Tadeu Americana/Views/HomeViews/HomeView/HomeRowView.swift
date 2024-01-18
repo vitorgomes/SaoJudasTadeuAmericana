@@ -11,8 +11,6 @@ struct HomeRowView: View {
     
     var homeRowText: HomeRowText
     
-    let oioi = SjtHistoryView()
-    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text(homeRowText.title)
