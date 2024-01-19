@@ -29,10 +29,10 @@ struct ChurchSuggestionsView: View {
                     ForEach(subjects, id: \.self) {
                         Text($0)
                     }
-                }.accentColor(.black)
+                }.accentColor(.black) // TODO: Need to implement color for dark mode
                     .overlay {
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color.black, lineWidth: 1)
+                            .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
                     } // TODO: Apparently .stroke modifier is only for iOS 17, need to confirm later and also create an alternative for old versions
             }.frame(maxWidth: screenSize.width * 0.85, alignment: .leading)
             
@@ -52,6 +52,7 @@ struct ChurchSuggestionsView: View {
                 .overlay {
                     RoundedRectangle(cornerRadius: 15)
                         .stroke(Color.black, lineWidth: 1) // TODO: Apparently .stroke modifier is only for iOS 17, need to confirm later and also create an alternative for old versions
+                            // TODO: Need to implement color for dark mode
                 }
                 .lineSpacing(5)
                 .padding()
@@ -61,10 +62,10 @@ struct ChurchSuggestionsView: View {
             } label: {
                 Text("Enviar")
             } .frame(maxWidth: screenSize.width * 0.45, minHeight: 35, alignment: .center)
-            .foregroundColor(.black)
+            .foregroundColor(.black) // TODO: Need to implement color for dark mode
             .overlay {
                 RoundedRectangle(cornerRadius: 15)
-                    .stroke(Color.black, lineWidth: 1)
+                    .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
             }
             // TODO: Add a Thank You message (Popup with fading animation maybe)
         }

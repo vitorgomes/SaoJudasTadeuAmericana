@@ -23,7 +23,7 @@ struct PrayersView: View {
                     .font(.title)
                 Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit") // TODO: Replace Lorem Ipsum text with a explanation of the button
             }.frame(maxHeight: screenSize.height * 0.25) // TODO: Test height later when introduce NavigationStack
-            .border(Color.black)
+            .border(Color.black) // TODO: Need to implement color for dark mode
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous)) // TODO: Investigate why corners are cutting the border
             
             Spacer()
@@ -33,7 +33,7 @@ struct PrayersView: View {
                     .font(.title)
                 Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit")
             }.frame(maxHeight: screenSize.height * 0.25)
-            .border(Color.black)
+            .border(Color.black) // TODO: Need to implement color for dark mode
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
             
             Spacer()

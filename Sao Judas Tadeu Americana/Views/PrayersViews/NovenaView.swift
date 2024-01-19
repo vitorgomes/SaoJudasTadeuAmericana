@@ -36,10 +36,10 @@ struct NovenaView: View {
                     } label: {
                         Text("Feito") // TODO: Discuss with the Priest if "Feito" can be replaced by another word
                     } .frame(maxWidth: screenSize.width * 0.45, minHeight: 35) // TODO: Since this button is using two Spacer() to align it on center, may be it will need to review the button width size. Tip: Remove Spacer() for tests
-                    .foregroundColor(.black)
+                    .foregroundColor(.black) // TODO: Need to implement color for dark mode
                     .overlay {
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color.black, lineWidth: 1)
+                            .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
                     }
                     
                     Spacer()
@@ -69,7 +69,7 @@ struct NovenaView: View {
                         .frame(maxWidth: screenSize.width * 0.15) // TODO: Change later with new style, i belive minWidth and maxWidth will be necessary
                         // TODO: Make the toggle go down
                         // TODO: Test with bigger checkbox sizes
-                        .foregroundColor(.black)
+                        .foregroundColor(.black) // TODO: Need to implement color for dark mode
                     
                     Spacer()
                     

@@ -27,13 +27,13 @@ struct SuggestionsView: View {
             } label: {
                 Text("A Igreja")
             } .frame(maxWidth: screenSize.width * 0.85, maxHeight: screenSize.height * 0.25)
-                .foregroundColor(.black)
+                .foregroundColor(.black) // TODO: Need to implement color for dark mode
                 //.border(Color.black)
                 //.background(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(.black, lineWidth: 1)) // TODO: Apparently .stroke modifier is only for iOS 17, need to confirm later and also create an alternative for old versions
                 // This modifier achieves the same result as above
                 .overlay {
                     RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.black, lineWidth: 1)
+                        .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
                 }
             
             Spacer()
@@ -47,9 +47,9 @@ struct SuggestionsView: View {
             } label: {
                 Text("O App")
             } .frame(maxWidth: screenSize.width * 0.85, maxHeight: screenSize.height * 0.25)
-            .foregroundColor(.black)
-                .border(Color.black)
-                .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+            .foregroundColor(.black) // TODO: Need to implement color for dark mode
+            .border(Color.black) // TODO: Need to implement color for dark mode
+            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
         }
     }
 }

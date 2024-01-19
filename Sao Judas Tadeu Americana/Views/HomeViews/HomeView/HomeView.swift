@@ -24,6 +24,7 @@ struct HomeView: View {
                     .fontWeight(.light)
             }
                 .padding(20) // TODO: Remove fixed size
+                // TODO: List Separator is half hiddent. Need to investigate
             
             ForEach(rowTexts) { item in
                 HomeRowView(homeRowText: item)

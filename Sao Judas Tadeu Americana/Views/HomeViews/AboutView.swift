@@ -13,9 +13,10 @@ struct AboutView: View {
         // TODO: Fix view spacing between the elements
         List {
             VStack {
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.") // TODO: Replace Lorem Ipsum text
+                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.")
+                    .listRowSeparator(.hidden) // TODO: Replace Lorem Ipsum text
                     // TODO: Add font style
-                    // Test put images from the church between the texts paragraph, like a paragraph and an image and so on
+                    // TODO: Test put images from the church between the texts paragraph, like a paragraph and an image and so on
                 HStack { // TODO: Make these as buttons, not only images
                     Image("instagramLogo")
                         .resizable()
@@ -34,7 +35,8 @@ struct AboutView: View {
                         .scaledToFill()
                         .clipShape(Circle())
                         .frame(width: 70, height: 70)
-                }//.background(Color.brown) // TODO: Decide a background color for the entire app
+                }.listRowSeparator(.hidden)
+                //.background(Color.brown) // TODO: Decide a background color for the entire app
             
                 Map() {
                     Marker("Paróquia São Judas Tadeu", coordinate: CLLocationCoordinate2D(latitude: -22.750035511019487, longitude: -47.358945254521316))

@@ -27,8 +27,8 @@ struct SettingsView: View {
                 } .multilineTextAlignment(.leading) // TODO: Verify if it only works on iOS 16
                     .padding()
             }.frame(maxWidth: screenSize.width * 0.85, maxHeight: screenSize.height * 0.25, alignment: .leading)
-            .foregroundColor(.black)
-            .border(Color.black)
+            .foregroundColor(.black) // TODO: Need to implement color for dark mode
+            .border(Color.black) // TODO: Need to implement color for dark mode
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
             .overlay(alignment: .topTrailing) {
                 Image(systemName: "slider.horizontal.3")
@@ -72,8 +72,8 @@ struct SettingsView: View {
                 } .multilineTextAlignment(.leading)
                     .padding()
             }.frame(maxWidth: screenSize.width * 0.85, maxHeight: screenSize.height * 0.25, alignment: .leading)
-            .foregroundColor(.black)
-            .border(Color.black)
+            .foregroundColor(.black) // TODO: Need to implement color for dark mode
+            .border(Color.black) // TODO: Need to implement color for dark mode
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
             .overlay(alignment: .topTrailing) {
                 Image(systemName: "star")
