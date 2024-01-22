@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-// TODO: Change the name of the screen to something like HomeView or MainView
 struct HomeView: View {
-    
     var body: some View {
         // TODO: I believe the List is ignoring safe area, need to check this
         List {
@@ -18,19 +16,18 @@ struct HomeView: View {
                     .resizable()
                     .scaledToFill()
                     .clipShape(Circle())
-                    .frame(width: 120, height: 120, alignment: .leading) // TODO: Remove fixed size, but the variable size should match this size proportionally
+                    .frame(maxWidth: 120, maxHeight: 120, alignment: .leading) // It is possible use dynamic value but UIScreen.main.bounds gets the size of screen (that makes the TextView bellow occupy part of sjtFace image space). To get the size of the view you need to use GeometryReader, but i believe it is not necessary for a simple projetct like this
                 
                 Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor") // TODO: Remove the Lorem ipsum with the real text
                     .fontWeight(.light)
             }
-                .padding(20) // TODO: Remove fixed size
-                // TODO: List Separator is half hiddent. Need to investigate
+            .padding(16)
+            // TODO: List Separator is half hiddent. Need to investigate
             
             ForEach(rowTexts) { item in
                 HomeRowView(homeRowText: item)
             }
         }
-            //.navigationTitle("Início")
     }
 }
 
