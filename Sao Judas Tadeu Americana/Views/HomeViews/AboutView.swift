@@ -9,6 +9,9 @@ import SwiftUI
 import MapKit
 
 struct AboutView: View {
+    
+    @Environment (\.dismiss) var dismiss
+    
     var body: some View {
         // TODO: Fix view spacing between the elements
         List {
@@ -43,6 +46,20 @@ struct AboutView: View {
                 }
                 .frame(width: 300, height: 200, alignment: .center) // TODO: Edit fixed size
                 // TODO: Add a custom pin for the map
+                
+                HStack {
+                    Spacer()
+                    
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("Voltar")
+                    }
+                    .foregroundColor(.black) // TODO: Need to implement color for dark mode
+                    
+                    Spacer()
+                }
+                //.listRowSeparator(.visible) // TODO: Not showing after MapView, need to investigate
             }
         }// .scrollContentBackground(.hidden) // TODO: Test it later
             .navigationTitle("Sobre")
