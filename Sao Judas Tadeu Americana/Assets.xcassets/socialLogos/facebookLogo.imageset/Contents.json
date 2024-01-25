@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "facebookLogo.png",
+      "filename" : "facebookLogo.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "facebookLogo@2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "facebookLogo@3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

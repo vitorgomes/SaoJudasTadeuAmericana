@@ -16,7 +16,7 @@ struct SjtHistoryCircleImageView: View {
             .resizable()
             .scaledToFill()
             .clipShape(Circle())
-            .frame(width: 100, height: 100)
+            .frame(maxWidth: 100, maxHeight: 100) // TODO: Need to add dynamic size
     }
 }
 

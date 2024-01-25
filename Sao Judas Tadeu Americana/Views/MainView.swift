@@ -41,7 +41,7 @@ struct MainView: View {
             notificationAuthorization()
             massHournotification()
         }
-        .navigationTitle("Início")
+        .navigationTitle("Início") // TODO: It is showing on all Views from the TabView, need to investigate
         .accentColor(.green) // TODO: Deprecated modifier after iOS 16. Need to create a AccentColor on Assets. Using green for test purposes
     }
 }
