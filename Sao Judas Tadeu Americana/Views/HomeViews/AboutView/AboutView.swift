@@ -55,7 +55,10 @@ struct AboutView: View {
                 Button {
                     dismiss()
                 } label: {
-                    Text("Voltar")
+                    HStack {
+                        Image(systemName: "chevron.backward.square")
+                        Text("Voltar")
+                    }
                 }
                 .foregroundColor(.black) // TODO: Need to implement color for dark mode
                 
@@ -66,10 +69,7 @@ struct AboutView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    // TODO: Refact this for a reusable button
-                    ShareLink(item: aboutText, preview: SharePreview("Texto \"Sobre a Paróquia\"", image: Image("sjtFace"))) {
-                        Label("Compartilhar", systemImage: "square.and.arrow.up")
-                    } // TODO: Replace "sjtFace" image for the App icon image
+                    ShareLinkView(viewText: aboutText, viewTitle: "Sobre a Paróquia")
                 }
             }
     }

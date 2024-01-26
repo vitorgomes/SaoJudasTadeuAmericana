@@ -15,12 +15,12 @@ struct AboutCircleLogoImageView: View {
         Image("\(aboutImage.name)")
             .resizable()
             .scaledToFill()
-            //.clipShape(Circle())
             .frame(width: 70, height: 70)
             .padding()
     }
 }
 
-#Preview {
-    AboutCircleLogoImageView(aboutImage: images.first!)
-}
+// Use for test purposes
+//#Preview {
+//    AboutCircleLogoImageView(aboutImage: images.first!)
+//}

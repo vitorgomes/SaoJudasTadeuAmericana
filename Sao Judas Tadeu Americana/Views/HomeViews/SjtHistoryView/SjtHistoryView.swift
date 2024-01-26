@@ -10,11 +10,12 @@ import SwiftUI
 struct SjtHistoryView: View {
     
     @Environment (\.dismiss) var dismiss
+    let sjtHistoryText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi."
     
     var body: some View {
         List {
             // TODO: Fix view spacing between the elements
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.") // TODO: Replace Lorem Ipsum text
+            Text("\(sjtHistoryText)") // TODO: Replace Lorem Ipsum text
                 .listRowSeparator(.hidden)
             // TODO: Add font style
             // Test put the images between the texts paragraph, like a paragraph and an image and so on
@@ -30,7 +31,10 @@ struct SjtHistoryView: View {
                 Button {
                     dismiss()
                 } label: {
-                    Text("Voltar")
+                    HStack {
+                        Image(systemName: "chevron.backward.square")
+                        Text("Voltar")
+                    }
                 }
                 .foregroundColor(.black) // TODO: Need to implement color for dark mode
                 
@@ -42,11 +46,7 @@ struct SjtHistoryView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        // TODO: Add the action to share the text of SJT History
-                    } label: {
-                        Image(systemName: "square.and.arrow.up")
-                    }
+                    ShareLinkView(viewText: sjtHistoryText, viewTitle: "História de São Judas Tadeu")
                 }
             }
     }

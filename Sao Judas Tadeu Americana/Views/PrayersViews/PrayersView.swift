@@ -58,6 +58,7 @@ struct PrayersView: View {
             .border(Color.black)
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
         }
+        .navigationTitle("Orações")
     }
 }
 
