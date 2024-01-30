@@ -22,7 +22,7 @@ struct HomeView: View {
                     // TODO: Maybe implement a share button here
                     .fontWeight(.light)
             }
-            .padding(16)
+            .padding(16) // TODO: Review if it is necessary
             // TODO: List Separator is half hiddent. Need to investigate
             
             ForEach(rowTexts) { item in

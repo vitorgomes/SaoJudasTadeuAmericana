@@ -22,6 +22,8 @@
 		E771C07A2B3716D300C5246F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E771C0792B3716D300C5246F /* Preview Assets.xcassets */; };
 		E7926E412B62E01300D4AFBB /* AboutCircleLogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7926E402B62E01300D4AFBB /* AboutCircleLogoImageView.swift */; };
 		E7926E442B62E0AA00D4AFBB /* AboutImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7926E432B62E0AA00D4AFBB /* AboutImage.swift */; };
+		E79701A12B6877B600E68417 /* PrayersRoundedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79701A02B6877B600E68417 /* PrayersRoundedRectangleView.swift */; };
+		E79701A32B68785400E68417 /* PrayersRoundedRectangleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79701A22B68785400E68417 /* PrayersRoundedRectangleText.swift */; };
 		E7A396F52B3F67D300A3ADE7 /* TitheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A396F42B3F67D300A3ADE7 /* TitheView.swift */; };
 		E7AE82FC2B55C0C400FD96A9 /* HomeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE82FB2B55C0C400FD96A9 /* HomeConstants.swift */; };
 		E7AE82FF2B55C49C00FD96A9 /* HomeRowText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE82FE2B55C49C00FD96A9 /* HomeRowText.swift */; };
@@ -50,6 +52,8 @@
 		E771C0792B3716D300C5246F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7926E402B62E01300D4AFBB /* AboutCircleLogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCircleLogoImageView.swift; sourceTree = "<group>"; };
 		E7926E432B62E0AA00D4AFBB /* AboutImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutImage.swift; sourceTree = "<group>"; };
+		E79701A02B6877B600E68417 /* PrayersRoundedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersRoundedRectangleView.swift; sourceTree = "<group>"; };
+		E79701A22B68785400E68417 /* PrayersRoundedRectangleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersRoundedRectangleText.swift; sourceTree = "<group>"; };
 		E7A396F42B3F67D300A3ADE7 /* TitheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitheView.swift; sourceTree = "<group>"; };
 		E7AE82FB2B55C0C400FD96A9 /* HomeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstants.swift; sourceTree = "<group>"; };
 		E7AE82FE2B55C49C00FD96A9 /* HomeRowText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRowText.swift; sourceTree = "<group>"; };
@@ -72,6 +76,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E702908D2B68834C00F0FDB7 /* PrayersView */ = {
+			isa = PBXGroup;
+			children = (
+				E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */,
+				E702908E2B68835A00F0FDB7 /* SubViews */,
+			);
+			path = PrayersView;
+			sourceTree = "<group>";
+		};
+		E702908E2B68835A00F0FDB7 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				E79701A02B6877B600E68417 /* PrayersRoundedRectangleView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		E74489C62B50795400039B0C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +128,7 @@
 		E74489C92B507A1F00039B0C /* PrayersViews */ = {
 			isa = PBXGroup;
 			children = (
-				E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */,
+				E702908D2B68834C00F0FDB7 /* PrayersView */,
 				E71757312B48C7A9005D9A20 /* NovenaView.swift */,
 			);
 			path = PrayersViews;
@@ -192,6 +213,7 @@
 				E7AE82FE2B55C49C00FD96A9 /* HomeRowText.swift */,
 				E7B808362B606EE500AF0AE2 /* SjtHistoryImage.swift */,
 				E7926E432B62E0AA00D4AFBB /* AboutImage.swift */,
+				E79701A22B68785400E68417 /* PrayersRoundedRectangleText.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -324,6 +346,7 @@
 				E71603F72B3CE917000E30F8 /* AboutView.swift in Sources */,
 				E700EB822B6441E1004909EF /* ShareLinkView.swift in Sources */,
 				E7926E442B62E0AA00D4AFBB /* AboutImage.swift in Sources */,
+				E79701A12B6877B600E68417 /* PrayersRoundedRectangleView.swift in Sources */,
 				E7B808372B606EE500AF0AE2 /* SjtHistoryImage.swift in Sources */,
 				E71757342B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift in Sources */,
 				E71D1DD42B45C47D00F55AF4 /* SuggestionsView.swift in Sources */,
@@ -331,6 +354,7 @@
 				E700EB842B644AA0004909EF /* BackButtonView.swift in Sources */,
 				E771C0732B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift in Sources */,
 				E7AE83012B55CA4300FD96A9 /* HomeRowView.swift in Sources */,
+				E79701A32B68785400E68417 /* PrayersRoundedRectangleText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
