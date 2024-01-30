@@ -27,21 +27,8 @@ struct PrayersRoundedRectangleView: View {
 }
 
 // Use for test purposes
-//#Preview {
-//    PrayersRoundedRectangleView(prayersRoundedRectangleText: viewTexts.first!)
-//}
-
-// TODO: Move these two to another file
-struct PaddingLeadingAndTrailing: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .padding(.leading)
-            .padding(.trailing)
-    }
+#Preview {
+    PrayersRoundedRectangleView(prayersRoundedRectangleText: viewTexts.first!)
 }
 
-extension View {
-    func paddingLeadingAndTrailing() -> some View {
-        modifier(PaddingLeadingAndTrailing())
-    }
-}
+

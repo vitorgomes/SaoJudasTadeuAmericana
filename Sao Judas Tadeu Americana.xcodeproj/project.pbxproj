@@ -16,6 +16,7 @@
 		E71D1DD42B45C47D00F55AF4 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */; };
 		E71D1DD62B45FB8600F55AF4 /* ChurchSuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D1DD52B45FB8600F55AF4 /* ChurchSuggestionsView.swift */; };
 		E74489CD2B5083ED00039B0C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74489CC2B5083ED00039B0C /* MainView.swift */; };
+		E7614E3C2B69952B00389648 /* PaddingLeadingAndTrailing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7614E3B2B69952B00389648 /* PaddingLeadingAndTrailing.swift */; };
 		E771C0732B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771C0722B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift */; };
 		E771C0752B3716D100C5246F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E771C0742B3716D100C5246F /* HomeView.swift */; };
 		E771C0772B3716D300C5246F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E771C0762B3716D300C5246F /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
 		E71D1DD52B45FB8600F55AF4 /* ChurchSuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchSuggestionsView.swift; sourceTree = "<group>"; };
 		E74489CC2B5083ED00039B0C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E7614E3B2B69952B00389648 /* PaddingLeadingAndTrailing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLeadingAndTrailing.swift; sourceTree = "<group>"; };
 		E771C06F2B3716D100C5246F /* Sao Judas Tadeu Americana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sao Judas Tadeu Americana.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E771C0722B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sao_Judas_Tadeu_AmericanaApp.swift; sourceTree = "<group>"; };
 		E771C0742B3716D100C5246F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -101,8 +103,8 @@
 				E74489C92B507A1F00039B0C /* PrayersViews */,
 				E74489CA2B507A4000039B0C /* TitheViews */,
 				E74489CB2B507A7100039B0C /* SettingsViews */,
-				E700EB812B6441E1004909EF /* ShareLinkView.swift */,
-				E700EB832B644A9F004909EF /* BackButtonView.swift */,
+				E7614E382B69948800389648 /* Shared Views */,
+				E7614E3D2B69964800389648 /* Shared Custom Modifiers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,6 +152,23 @@
 				E71D1DD52B45FB8600F55AF4 /* ChurchSuggestionsView.swift */,
 			);
 			path = SettingsViews;
+			sourceTree = "<group>";
+		};
+		E7614E382B69948800389648 /* Shared Views */ = {
+			isa = PBXGroup;
+			children = (
+				E700EB812B6441E1004909EF /* ShareLinkView.swift */,
+				E700EB832B644A9F004909EF /* BackButtonView.swift */,
+			);
+			path = "Shared Views";
+			sourceTree = "<group>";
+		};
+		E7614E3D2B69964800389648 /* Shared Custom Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				E7614E3B2B69952B00389648 /* PaddingLeadingAndTrailing.swift */,
+			);
+			path = "Shared Custom Modifiers";
 			sourceTree = "<group>";
 		};
 		E771C0662B3716D100C5246F = {
@@ -348,6 +367,7 @@
 				E7926E442B62E0AA00D4AFBB /* AboutImage.swift in Sources */,
 				E79701A12B6877B600E68417 /* PrayersRoundedRectangleView.swift in Sources */,
 				E7B808372B606EE500AF0AE2 /* SjtHistoryImage.swift in Sources */,
+				E7614E3C2B69952B00389648 /* PaddingLeadingAndTrailing.swift in Sources */,
 				E71757342B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift in Sources */,
 				E71D1DD42B45C47D00F55AF4 /* SuggestionsView.swift in Sources */,
 				E7B808342B6057D300AF0AE2 /* SjtHistoryCircleImageView.swift in Sources */,
