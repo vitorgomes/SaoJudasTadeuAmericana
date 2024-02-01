@@ -13,12 +13,15 @@ struct SuggestionsView: View {
     
     var body: some View {
         VStack {
+            Spacer()
+            
             Text("Sugestões, comentários e feedbacks são sempre bem-vindos para aprimorar nosso trabalho. Buscamos constantemente melhorias e inovações, e este é o espaço ideal para isso.")
                 .frame(maxWidth: screenSize.width * 0.85) // TODO: Probably will need to add a maxHeight too
             
             Spacer()
             
             Text("Deseja fazer sugestões sobre:")
+                .frame(alignment: .center)
             
             Spacer()
             
@@ -39,6 +42,7 @@ struct SuggestionsView: View {
             Spacer()
             
             Text("Ou")
+                .frame(alignment: .center)
             
             Spacer()
 
@@ -51,11 +55,16 @@ struct SuggestionsView: View {
             .border(Color.black) // TODO: Need to implement color for dark mode
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
         }
+        .navigationTitle("Sugestões")
+        .navigationBarTitleDisplayMode(.inline)
+        .padding(.bottom, 16)
     }
 }
 
 #Preview {
-    SuggestionsView()
+    NavigationStack {
+        SuggestionsView()
+    }
 }
 
 // This might be useful for older versions

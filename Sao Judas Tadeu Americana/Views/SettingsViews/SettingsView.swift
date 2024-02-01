@@ -103,9 +103,13 @@ struct SettingsView: View {
                     .padding()
             }
         }
+        .navigationTitle("Configurações")
+        .padding(.bottom, 16)
     }
 }
 
 #Preview {
-    SettingsView()
+    NavigationStack {
+        SettingsView()
+    }
 }

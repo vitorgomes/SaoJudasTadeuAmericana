@@ -18,6 +18,9 @@ struct ChurchSuggestionsView: View {
     
     var body: some View {
         // TODO: Disable all views bellow the first (Picker). This way will force the user follow step by step of the screen
+        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in risus ut dui congue venenatis. Maecenas viverra a lectus vitae molestie.") // TODO: Add the real text and remove Lorem Ipsum
+            .frame(maxWidth: screenSize.width * 0.85)
+        
         VStack {
             // TODO: Maybe add a text describing the screen
             HStack(spacing: 0) {
@@ -25,6 +28,7 @@ struct ChurchSuggestionsView: View {
                 
                 // TODO: Verify the official article about Picker from Apple. It uses Enum instead of Array
                 // TODO:  Add a maxWidth for this but test multine because of "Catequese/Crisma" option
+                // TODO: Search to see if there is anyway to keep it empty when user access the page and did not selected anything yet, or a placeholder
                 Picker("Por favor escolha o assunto", selection: $selectedSubject) {
                     ForEach(subjects, id: \.self) {
                         Text($0)
@@ -69,9 +73,14 @@ struct ChurchSuggestionsView: View {
             }
             // TODO: Add a Thank You message (Popup with fading animation maybe)
         }
+        .navigationTitle("Sugestões para a Igreja")
+        .navigationBarTitleDisplayMode(.inline)
+        //.padding(.bottom, 16) TODO: Check if it will be necessary
     }
 }
 
 #Preview {
-    ChurchSuggestionsView()
+    NavigationStack {
+        ChurchSuggestionsView()
+    }
 }

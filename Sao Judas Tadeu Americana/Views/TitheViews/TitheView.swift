@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct TitheView: View {
+    
+    let screenSize = UIScreen.main.bounds
+    
     var body: some View {
         // TODO: Add a share button in the Navigation Stack. When the person click, generate a image of the screen but only with QR Code and Pix address
         VStack {
+            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in risus ut dui congue venenatis. Maecenas viverra a lectus vitae molestie.") // TODO: Add the real text and remove Lorem Ipsum
+                .frame(maxWidth: screenSize.width * 0.85)
+                .padding(.top, 16)
+            
+            Spacer()
+            
             Image("googleQRCode")
                 .resizable()
                 .scaledToFit()
@@ -39,8 +48,14 @@ struct TitheView: View {
             } .frame(maxWidth: 300) // TODO: Make this HStack same width as QRCode image but dynamically
                 
             // TODO: Review de aligment of these two TextViews, if should use one line or two separated lines
+            
+            Spacer()
+            
             Text("Outro tipo de doação?")
             Text(" Entre em contato via WhatsApp")
+            
+            Spacer()
+            
             Button {
                 // TODO: Add action to copy the Pix address to the clipboard
             } label: {
@@ -49,12 +64,16 @@ struct TitheView: View {
                     .scaledToFill()
                     .clipShape(Circle())
                     .frame(width: 100, height: 100, alignment: .center)
+                    .padding(.bottom, 16)
             }
             
         } //.fixedSize(horizontal: true, vertical: false) // TODO: Review. Need to make the HStack above the same width of the QR Code image
+        .navigationTitle("Dízimo")
     }
 }
 
 #Preview {
-    TitheView()
+    NavigationStack {
+        TitheView()
+    }
 }
