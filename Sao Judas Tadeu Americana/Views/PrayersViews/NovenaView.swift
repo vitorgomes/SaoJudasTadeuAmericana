@@ -12,6 +12,8 @@ struct NovenaView: View {
     let screenSize = UIScreen.main.bounds
     
     // TODO: Repeated code. Think something later to use less variables as possible. Will keep it for now just for test purposes
+    @Environment (\.dismiss) var dismiss
+    @State private var candleHalfView = true
     @State private var firstDay = true
     @State private var secondDay = true
     @State private var thirdDay = true
@@ -28,37 +30,58 @@ struct NovenaView: View {
                 Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.") // TODO: Replace Lorem Ipsum text
                 
                 HStack {
-                    // Using these two Spacer() is a poor way to align it, but the .frame(alignment: .center) was not working. May can be replaced by GeometryReader, but it will consume more memory
                     Spacer()
                     
                     Button {
                         // TODO: Add action to when tapped mark the check box of the day completed and return to previous screen
                     } label: {
-                        Text("Feito") // TODO: Discuss with the Priest if "Feito" can be replaced by another word
-                    } .frame(maxWidth: screenSize.width * 0.45, minHeight: 35) // TODO: Since this button is using two Spacer() to align it on center, may be it will need to review the button width size. Tip: Remove Spacer() for tests
-                    .foregroundColor(.black) // TODO: Need to implement color for dark mode
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
+                        HStack {
+                            Image(systemName: "checkmark.square")
+                            Text("Feito") // TODO: Discuss with the Priest if "Feito" can be replaced by another word
+                        }
                     }
+                    .foregroundColor(.black) // TODO: Need to implement color for dark mode
+                    
+                    Spacer()
+                }
+                
+                HStack {
+                    Spacer()
+                    
+                    Button {
+                        dismiss()
+                    } label: {
+                        HStack {
+                            Image(systemName: "chevron.backward.square") // TODO: Need to align with "Feito" checkmark.square SF Symbol
+                            Text("Voltar") // TODO: Discuss with the Priest if "Feito" can be replaced by another word
+                        }
+                    }
+                    .foregroundColor(.black) // TODO: Need to implement color for dark mode
                     
                     Spacer()
                 }
             }
-            
             VStack {
+                // TODO: Search how to stay on top because when you disable $candleHalfView it is getting on top of the flame
+                Toggle(isOn: $candleHalfView) {
+                }.toggleStyle(ChevronToggleStyle())
+                    .padding(.top)
+                    .foregroundStyle(.black)
+                    //.background(Color(.red)) // Test purposes
                 
-                VStack {
-                    // Testing purposes to make candle half size of screen, so it will be easier to users reach all days with fingers
-                    // TODO: Maybe add a text or image here to populate the screen
-                    // TODO: Maybe make this a configuration, so user can set the way he want, full size or not. Probable can add the caret simbol (^) at the top, in a dropdown button
-                }.frame(maxHeight: screenSize.height * 0.5)
+                if candleHalfView {
+                    VStack {
+                        // Testing purposes to make candle half size of screen, so it will be easier to users reach all days with fingers
+                        // TODO: Maybe add a text or image here to populate the screen
+                        // TODO: Maybe make this a configuration, so user can set the way he want, full size or not. Probable can add the caret simbol (^) at the top, in a dropdown button
+                    }.frame(maxHeight: screenSize.height * 0.5)
+                }
                 
                 VStack {
                     // TODO: Need to draw the candle using the flame and checkboxes
                     Image(systemName: "flame.fill")
                         .foregroundColor(.orange)
-                        .symbolEffect(.pulse) // TODO: This might distract the user. Make some test to decide remove or not. Maybe make it slower
+                        .symbolEffect(.pulse) // TODO: This might distract the user. Make some test to decide remove or not. Maybe make it slower or static
                     
                     Spacer()
                     
@@ -138,10 +161,14 @@ struct NovenaView: View {
                 }.frame(maxHeight: screenSize.height * 0.5)
                 
             }
-        }
+        }.padding(.top, 0.2)
+        .navigationTitle("Novena X, Dia X")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    NovenaView()
+    NavigationStack {
+        NovenaView()
+    }
 }
