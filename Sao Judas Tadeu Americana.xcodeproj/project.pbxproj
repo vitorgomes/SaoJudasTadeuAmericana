@@ -35,6 +35,7 @@
 		E7B808392B60798900AF0AE2 /* SjtHistoryImagesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B808382B60798900AF0AE2 /* SjtHistoryImagesRowView.swift */; };
 		E7BAF8F22B3E2A9B00DB6F21 /* SjtHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF8F12B3E2A9B00DB6F21 /* SjtHistoryView.swift */; };
 		E7BAF8F42B3E45C900DB6F21 /* PrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */; };
+		E7C6CF102B6D73A00017B482 /* PrayersSongsNovenasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C6CF0F2B6D73A00017B482 /* PrayersSongsNovenasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		E7B808382B60798900AF0AE2 /* SjtHistoryImagesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SjtHistoryImagesRowView.swift; sourceTree = "<group>"; };
 		E7BAF8F12B3E2A9B00DB6F21 /* SjtHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SjtHistoryView.swift; sourceTree = "<group>"; };
 		E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersView.swift; sourceTree = "<group>"; };
+		E7C6CF0F2B6D73A00017B482 /* PrayersSongsNovenasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersSongsNovenasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */,
+				E7C6CF0F2B6D73A00017B482 /* PrayersSongsNovenasView.swift */,
 				E702908E2B68835A00F0FDB7 /* SubViews */,
 			);
 			path = PrayersView;
@@ -376,6 +379,7 @@
 				E71D1DD42B45C47D00F55AF4 /* SuggestionsView.swift in Sources */,
 				E7B808342B6057D300AF0AE2 /* SjtHistoryCircleImageView.swift in Sources */,
 				E700EB842B644AA0004909EF /* BackButtonView.swift in Sources */,
+				E7C6CF102B6D73A00017B482 /* PrayersSongsNovenasView.swift in Sources */,
 				E771C0732B3716D100C5246F /* Sao_Judas_Tadeu_AmericanaApp.swift in Sources */,
 				E7AE83012B55CA4300FD96A9 /* HomeRowView.swift in Sources */,
 				E79701A32B68785400E68417 /* PrayersRoundedRectangleText.swift in Sources */,

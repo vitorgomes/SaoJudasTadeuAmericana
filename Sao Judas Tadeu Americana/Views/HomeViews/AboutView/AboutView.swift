@@ -56,7 +56,7 @@ struct AboutView: View {
                     dismiss()
                 } label: {
                     HStack {
-                        Image(systemName: "chevron.backward.square")
+                        Image(systemName: "chevron.left")
                         Text("Voltar")
                     }
                 }

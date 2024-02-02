@@ -9,13 +9,14 @@ import Foundation
 
 struct PrayersRoundedRectangleText: Identifiable, Equatable {
     var id = UUID()
+    var emoji = String()
     var title = String()
     var description = String()
 }
 
 // TODO: "Cantos" or "Canções"
 var viewTexts = [
-    PrayersRoundedRectangleText(title: "Orações", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"),
-    PrayersRoundedRectangleText(title: "Cantos", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"),
-    PrayersRoundedRectangleText(title: "Novenas", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit")
+    PrayersRoundedRectangleText(emoji: "🤲", title: "Orações", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"),
+    PrayersRoundedRectangleText(emoji: "🎵", title: "Cantos", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"),
+    PrayersRoundedRectangleText(emoji: "🕯️", title: "Novenas", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit")
 ]

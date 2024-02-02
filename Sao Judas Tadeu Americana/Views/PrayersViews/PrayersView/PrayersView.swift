@@ -16,7 +16,7 @@ struct PrayersView: View {
             ForEach(viewTexts) { item in
                 if(item == viewTexts.last) {
                     PrayersRoundedRectangleView(prayersRoundedRectangleText: item)
-                        .overlayedPulsingFireAnimation()
+                        .overlayedPulsingFireAnimation(paddingSize: 24)
                 } else {
                     PrayersRoundedRectangleView(prayersRoundedRectangleText: item)
                 }
@@ -34,9 +34,11 @@ struct PrayersView: View {
     }
 }
 
+// TODO: Move these two bellow to a separated file
 struct OverlayedPulsingFireAnimation: ViewModifier {
     
     @State var ongoingNovena = false
+    @State var paddingSize: CGFloat
     
     func body(content: Content) -> some View {
         content
@@ -46,18 +48,18 @@ struct OverlayedPulsingFireAnimation: ViewModifier {
                     Image(systemName: "flame.fill")
                         .foregroundColor(.orange)
                         .symbolEffect(.pulse)
-                        .padding()
+                        .padding(paddingSize)
                 } else {
                     Image(systemName: "flame.fill")
                         .foregroundColor(.gray)
-                        .padding()
+                        .padding(paddingSize)
                 }
             })
     }
 }
 
 extension View {
-    func overlayedPulsingFireAnimation() -> some View {
-        modifier(OverlayedPulsingFireAnimation())
+    func overlayedPulsingFireAnimation(paddingSize: CGFloat) -> some View {
+        modifier(OverlayedPulsingFireAnimation(paddingSize: paddingSize))
     }
 }

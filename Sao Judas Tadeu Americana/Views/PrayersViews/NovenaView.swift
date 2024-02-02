@@ -36,7 +36,7 @@ struct NovenaView: View {
                         // TODO: Add action to when tapped mark the check box of the day completed and return to previous screen
                     } label: {
                         HStack {
-                            Image(systemName: "checkmark.square")
+                            Image(systemName: "checkmark")
                             Text("Feito") // TODO: Discuss with the Priest if "Feito" can be replaced by another word
                         }
                     }
@@ -52,7 +52,7 @@ struct NovenaView: View {
                         dismiss()
                     } label: {
                         HStack {
-                            Image(systemName: "chevron.backward.square") // TODO: Need to align with "Feito" checkmark.square SF Symbol
+                            Image(systemName: "chevron.left") // TODO: Need to align with "Feito" checkmark.square SF Symbol
                             Text("Voltar") // TODO: Discuss with the Priest if "Feito" can be replaced by another word
                         }
                     }

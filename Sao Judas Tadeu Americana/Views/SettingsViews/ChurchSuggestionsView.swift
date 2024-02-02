@@ -16,6 +16,8 @@ struct ChurchSuggestionsView: View {
     @State private var selectedSubject = ""
     @State private var suggestionText = ""
     
+    @Environment (\.dismiss) var dismiss
+    
     var body: some View {
         // TODO: Disable all views bellow the first (Picker). This way will force the user follow step by step of the screen
         Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in risus ut dui congue venenatis. Maecenas viverra a lectus vitae molestie.") // TODO: Add the real text and remove Lorem Ipsum
@@ -64,14 +66,30 @@ struct ChurchSuggestionsView: View {
             Button {
                 // TODO: Add action to when tapped send an email to Church's email address
             } label: {
-                Text("Enviar")
-            } .frame(maxWidth: screenSize.width * 0.45, minHeight: 35, alignment: .center)
+                HStack {
+                    Image(systemName: "paperplane")
+                    Text("Enviar")
+                }
+            } .frame(maxWidth: screenSize.width * 0.85, minHeight: 35, alignment: .center)
             .foregroundColor(.black) // TODO: Need to implement color for dark mode
             .overlay {
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
             }
             // TODO: Add a Thank You message (Popup with fading animation maybe)
+            Button {
+                // TODO: Add action to when tapped send an email to Church's email address
+            } label: {
+                HStack {
+                    Image(systemName: "chevron.left")
+                    Text("Voltar")
+                }
+            } .frame(maxWidth: screenSize.width * 0.85, minHeight: 35, alignment: .center)
+            .foregroundColor(.black) // TODO: Need to implement color for dark mode
+            .overlay {
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
+            }
         }
         .navigationTitle("Sugestões para a Igreja")
         .navigationBarTitleDisplayMode(.inline)
