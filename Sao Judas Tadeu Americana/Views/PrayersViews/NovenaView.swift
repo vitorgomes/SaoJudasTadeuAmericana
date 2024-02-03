@@ -29,6 +29,7 @@ struct NovenaView: View {
             List {
                 Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.") // TODO: Replace Lorem Ipsum text
                 
+                // TODO: I believe it is better to make fixed buttons, review the video about GeometryReader with reference in SettingsView
                 HStack {
                     Spacer()
                     
@@ -65,16 +66,17 @@ struct NovenaView: View {
                 // TODO: Search how to stay on top because when you disable $candleHalfView it is getting on top of the flame
                 Toggle(isOn: $candleHalfView) {
                 }.toggleStyle(ChevronToggleStyle())
-                    .padding(.top)
+                    .padding(.top, 16)
                     .foregroundStyle(.black)
-                    //.background(Color(.red)) // Test purposes
+                    .frame(width: 50, height: 50) // TODO: Add a dynamic size, or a max min one
+                    //.background(Color(.red)) // TODO: Test purposes, remove later
                 
                 if candleHalfView {
                     VStack {
-                        // Testing purposes to make candle half size of screen, so it will be easier to users reach all days with fingers
-                        // TODO: Maybe add a text or image here to populate the screen
-                        // TODO: Maybe make this a configuration, so user can set the way he want, full size or not. Probable can add the caret simbol (^) at the top, in a dropdown button
+                        // VStack used to create half space, when user wants to make the candle near to bottom, to make easy fingers reach out
                     }.frame(maxHeight: screenSize.height * 0.5)
+                } else {
+                    Spacer() // Makes space between candle stack and chevrondown/up Toggle consequently make the toggle be fixed to the top
                 }
                 
                 VStack {
@@ -82,74 +84,107 @@ struct NovenaView: View {
                     Image(systemName: "flame.fill")
                         .foregroundColor(.orange)
                         .symbolEffect(.pulse) // TODO: This might distract the user. Make some test to decide remove or not. Maybe make it slower or static
+                        .padding(.top, 16)
                     
                     Spacer()
                     
                     // Should has 9 days
                     // TODO: Add a logic where only the present day of Novena is enabled, the past days are disabled. If you mark a day as done, the past ones get disabled. Also change the color when disabled. There is another option to make the screen follow a candle logic, where the flame starts on the top and when the person marks a day completed, it shrinks
-                    Toggle(isOn: $firstDay) { // TODO: Remember to add the string on this line. I believe is for voiceOver
-                    }.toggleStyle(iOSCheckboxToggleStyle())
-                        .frame(maxWidth: screenSize.width * 0.15) // TODO: Change later with new style, i belive minWidth and maxWidth will be necessary
-                        // TODO: Make the toggle go down
-                        // TODO: Test with bigger checkbox sizes
-                        .foregroundColor(.black) // TODO: Need to implement color for dark mode
+                    VStack {
+                        Toggle(isOn: $firstDay) { // TODO: Remember to add the string on this line. I believe is for voiceOver
+                        }.toggleStyle(iOSCheckboxToggleStyle())
+                            .frame(maxWidth: screenSize.width * 0.15) // TODO: Change later with new style, i belive minWidth and maxWidth will be necessary
+                            // TODO: Make the toggle go down
+                            // TODO: Test with bigger checkbox sizes
+                            .foregroundColor(.black) // TODO: Need to implement color for dark mode
+                        
+                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center) // TODO: Dynamically expand line height
+                    }
                     
                     Spacer()
                     
-                    Toggle(isOn: $secondDay) {
-                    }.toggleStyle(iOSCheckboxToggleStyle())
-                        .frame(maxWidth: screenSize.width * 0.15)
-                        .foregroundColor(.black)
-                        .disabled(true)
+                    VStack {
+                        Toggle(isOn: $secondDay) {
+                        }.toggleStyle(iOSCheckboxToggleStyle())
+                            .frame(maxWidth: screenSize.width * 0.15)
+                            .foregroundColor(.black)
+                            .disabled(true)
+                        
+                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
+                    }
                     
                     Spacer()
                     
-                    Toggle(isOn: $thirdDay) {
-                    }.toggleStyle(iOSCheckboxToggleStyle())
-                        .frame(maxWidth: screenSize.width * 0.15)
-                        .foregroundColor(.black)
-                        .disabled(true)
+                    VStack {
+                        Toggle(isOn: $thirdDay) {
+                        }.toggleStyle(iOSCheckboxToggleStyle())
+                            .frame(maxWidth: screenSize.width * 0.15)
+                            .foregroundColor(.black)
+                            .disabled(true)
+                        
+                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
+                    }
                     
                     Spacer()
                     
-                    Toggle(isOn: $fourthDay) {
-                    }.toggleStyle(iOSCheckboxToggleStyle())
-                        .frame(maxWidth: screenSize.width * 0.15)
-                        .foregroundColor(.black)
-                        .disabled(true)
+                    VStack {
+                        Toggle(isOn: $fourthDay) {
+                        }.toggleStyle(iOSCheckboxToggleStyle())
+                            .frame(maxWidth: screenSize.width * 0.15)
+                            .foregroundColor(.black)
+                            .disabled(true)
+                        
+                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
+                    }
                     
                     Spacer()
                     
-                    Toggle(isOn: $fifthay) {
-                    }.toggleStyle(iOSCheckboxToggleStyle())
-                        .frame(maxWidth: screenSize.width * 0.15)
-                        .foregroundColor(.black)
-                        .disabled(true)
+                    VStack {
+                        Toggle(isOn: $fifthay) {
+                        }.toggleStyle(iOSCheckboxToggleStyle())
+                            .frame(maxWidth: screenSize.width * 0.15)
+                            .foregroundColor(.black)
+                            .disabled(true)
+                        
+                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
+                    }
                     
                     Spacer()
                     
-                    Toggle(isOn: $sixthDay) {
-                    }.toggleStyle(iOSCheckboxToggleStyle())
-                        .frame(maxWidth: screenSize.width * 0.15)
-                        .foregroundColor(.black)
-                        .disabled(true)
+                    VStack {
+                        Toggle(isOn: $sixthDay) {
+                        }.toggleStyle(iOSCheckboxToggleStyle())
+                            .frame(maxWidth: screenSize.width * 0.15)
+                            .foregroundColor(.black)
+                            .disabled(true)
+                        
+                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
+                    }
                     
                     Spacer()
                     
-                    Toggle(isOn: $seventhDay) {
-                    }.toggleStyle(iOSCheckboxToggleStyle())
-                        .frame(maxWidth: screenSize.width * 0.15)
-                        .foregroundColor(.black)
-                        .disabled(true)
-                    
+                    VStack {
+                        Toggle(isOn: $seventhDay) {
+                        }.toggleStyle(iOSCheckboxToggleStyle())
+                            .frame(maxWidth: screenSize.width * 0.15)
+                            .foregroundColor(.black)
+                            .disabled(true)
+                        
+                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
+                    }
+
                     Spacer()
                     
-                    Toggle(isOn: $eighthDay) {
-                    }.toggleStyle(iOSCheckboxToggleStyle())
-                        .frame(maxWidth: screenSize.width * 0.15)
-                        .foregroundColor(.black)
-                        .disabled(true)
-                    
+                    VStack {
+                        Toggle(isOn: $eighthDay) {
+                        }.toggleStyle(iOSCheckboxToggleStyle())
+                            .frame(maxWidth: screenSize.width * 0.15)
+                            .foregroundColor(.black)
+                            .disabled(true)
+                        
+                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
+                    }
+  
                     Spacer()
                     
                     Toggle(isOn: $ninthDay) {
@@ -157,10 +192,10 @@ struct NovenaView: View {
                         .frame(maxWidth: screenSize.width * 0.15)
                         .foregroundColor(.black)
                         .disabled(true)
-                        .padding(.bottom, 30) // TODO: Change 30 for a dynamic number based on User's screen size
-                }.frame(maxHeight: screenSize.height * 0.5)
+                        .padding(.bottom, 16)
+                }.frame(maxHeight: candleHalfView ? screenSize.height * 0.5 : screenSize.height * 0.8) // TODO: Test later with the TabBar
                 
-            }
+            }.frame(maxWidth: screenSize.width * 0.13)
         }.padding(.top, 0.2)
         .navigationTitle("Novena X, Dia X")
         .navigationBarTitleDisplayMode(.inline)
