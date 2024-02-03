@@ -17,7 +17,7 @@ struct PrayersSongsNovenasView: View {
                 VStack(alignment: .leading) {
                     Text("Orações")
                         .font(.title)
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.") // TODO: Test trailing padding here, when the text is long
+                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.ooooooooooooo") // TODO: Test trailing padding here, when the text is long
                 }
             }
             
@@ -28,7 +28,7 @@ struct PrayersSongsNovenasView: View {
                 VStack(alignment: .leading) {
                     Text("Cantos")
                         .font(.title)
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elitoooooooo.")
                 }
             }
             
@@ -39,7 +39,7 @@ struct PrayersSongsNovenasView: View {
                 VStack(alignment: .leading) {
                     Text("Novenas")
                         .font(.title)
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.ooooooooooooooooooooooooooo")
                 }
             }
             //.background(Color(.blue))

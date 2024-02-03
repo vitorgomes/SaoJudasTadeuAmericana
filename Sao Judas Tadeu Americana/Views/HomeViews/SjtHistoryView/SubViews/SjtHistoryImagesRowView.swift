@@ -25,6 +25,6 @@ struct SjtHistoryImagesRowView: View {
 }
 
 // Use for test purposes
-//#Preview {
-//    SjtHistoryImagesRowView(images: imagesGroup1)
-//}
+#Preview {
+    SjtHistoryImagesRowView(images: imagesGroup1)
+}
