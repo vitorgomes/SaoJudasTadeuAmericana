@@ -11,14 +11,17 @@ struct NovenaView: View {
     
     let screenSize = UIScreen.main.bounds
     
-    // TODO: Repeated code. Think something later to use less variables as possible. Will keep it for now just for test purposes
     @Environment (\.dismiss) var dismiss
     @State private var candleHalfView = true
+    @State private var buttonsHeight: Double = .zero
+    
+    // Day variables
+    // TODO: Repeated code. Think something later to use less variables as possible. Will keep it for now just for test purposes
     @State private var firstDay = true
     @State private var secondDay = true
     @State private var thirdDay = true
     @State private var fourthDay = true
-    @State private var fifthay = true
+    @State private var fifthDay = true
     @State private var sixthDay = true
     @State private var seventhDay = true
     @State private var eighthDay = true
@@ -26,13 +29,18 @@ struct NovenaView: View {
     
     var body: some View {
         HStack {
-            List {
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.") // TODO: Replace Lorem Ipsum text
+            // List + Done and Back Buttons
+            ZStack(alignment: .bottom) {
+                List {
+                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.") // TODO: Replace Lorem Ipsum text
+                }
+                // TODO: Bellow .background and .scrollContentBackground modifiers are for tests purpose, remove later
+                .background(.red)
+                .scrollContentBackground(.hidden)
+                .padding(.bottom, 16  + buttonsHeight) // TODO: Need to discover why bottom is getting this white rectangle every time adds the buttonsHeight variable
+                .edgesIgnoringSafeArea(.bottom)
                 
-                // TODO: I believe it is better to make fixed buttons, review the video about GeometryReader with reference in SettingsView
-                HStack {
-                    Spacer()
-                    
+                VStack(spacing: 8) {
                     Button {
                         // TODO: Add action to when tapped mark the check box of the day completed and return to previous screen
                     } label: {
@@ -40,36 +48,42 @@ struct NovenaView: View {
                             Image(systemName: "checkmark")
                             Text("Feito") // TODO: Discuss with the Priest if "Feito" can be replaced by another word
                         }
+                        .tint(.black)
+                        .frame(width: screenSize.width * 0.65, height: 35)
+                        .background(Color(.green))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                     }
-                    .foregroundColor(.black) // TODO: Need to implement color for dark mode
-                    
-                    Spacer()
-                }
-                
-                HStack {
-                    Spacer()
-                    
+
                     Button {
-                        dismiss()
+                        
                     } label: {
                         HStack {
                             Image(systemName: "chevron.left") // TODO: Need to align with "Feito" checkmark.square SF Symbol
-                            Text("Voltar") // TODO: Discuss with the Priest if "Feito" can be replaced by another word
+                            Text("Voltar")
                         }
+                        .tint(.black)
+                        .frame(width: screenSize.width * 0.65, height: 35)
+                        .background(Color(.green))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                     }
-                    .foregroundColor(.black) // TODO: Need to implement color for dark mode
-                    
-                    Spacer()
                 }
+                .getViewSize { size in
+                    buttonsHeight = size.height
+                    print(buttonsHeight) // TODO: Tests purpose, remove later
+                }
+                //.frame(width: 100)
+                //.background(Color(.red))
+                //.padding(.bottom, 16)
             }
+            
+            // Chevron Toggle + Candle Toggles
             VStack {
-                // TODO: Search how to stay on top because when you disable $candleHalfView it is getting on top of the flame
                 Toggle(isOn: $candleHalfView) {
                 }.toggleStyle(ChevronToggleStyle())
-                    .padding(.top, 16)
+                    .padding(.top, 8)
+                    .padding(.trailing, 2) // TODO: Review if a dynamic size is necessary
                     .foregroundStyle(.black)
                     .frame(width: 50, height: 50) // TODO: Add a dynamic size, or a max min one
-                    //.background(Color(.red)) // TODO: Test purposes, remove later
                 
                 if candleHalfView {
                     VStack {
@@ -97,11 +111,13 @@ struct NovenaView: View {
                             // TODO: Make the toggle go down
                             // TODO: Test with bigger checkbox sizes
                             .foregroundColor(.black) // TODO: Need to implement color for dark mode
-                        
-                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center) // TODO: Dynamically expand line height
                     }
-                    
-                    Spacer()
+
+                    ZStack {
+                        Spacer()
+                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
+                            .frame(maxHeight: .infinity)
+                    }
                     
                     VStack {
                         Toggle(isOn: $secondDay) {
@@ -109,11 +125,13 @@ struct NovenaView: View {
                             .frame(maxWidth: screenSize.width * 0.15)
                             .foregroundColor(.black)
                             .disabled(true)
-                        
-                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
                     }
                     
-                    Spacer()
+                    ZStack {
+                        Spacer()
+                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
+                            .frame(maxHeight: .infinity)
+                    }
                     
                     VStack {
                         Toggle(isOn: $thirdDay) {
@@ -121,11 +139,13 @@ struct NovenaView: View {
                             .frame(maxWidth: screenSize.width * 0.15)
                             .foregroundColor(.black)
                             .disabled(true)
-                        
-                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
                     }
-                    
-                    Spacer()
+
+                    ZStack {
+                        Spacer()
+                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
+                            .frame(maxHeight: .infinity)
+                    }
                     
                     VStack {
                         Toggle(isOn: $fourthDay) {
@@ -133,23 +153,30 @@ struct NovenaView: View {
                             .frame(maxWidth: screenSize.width * 0.15)
                             .foregroundColor(.black)
                             .disabled(true)
-                        
-                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
                     }
                     
-                    Spacer()
+                    ZStack {
+                        Spacer()
+                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
+                            .frame(maxHeight: .infinity)
+                    }
                     
                     VStack {
-                        Toggle(isOn: $fifthay) {
+                        Toggle(isOn: $fifthDay) {
                         }.toggleStyle(iOSCheckboxToggleStyle())
                             .frame(maxWidth: screenSize.width * 0.15)
                             .foregroundColor(.black)
                             .disabled(true)
                         
-                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
+                        //Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
                     }
                     
-                    Spacer()
+                    //Spacer()
+                    ZStack {
+                        Spacer()
+                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
+                            .frame(maxHeight: .infinity)
+                    }
                     
                     VStack {
                         Toggle(isOn: $sixthDay) {
@@ -157,11 +184,13 @@ struct NovenaView: View {
                             .frame(maxWidth: screenSize.width * 0.15)
                             .foregroundColor(.black)
                             .disabled(true)
-                        
-                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
                     }
                     
-                    Spacer()
+                    ZStack {
+                        Spacer()
+                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
+                            .frame(maxHeight: .infinity)
+                    }
                     
                     VStack {
                         Toggle(isOn: $seventhDay) {
@@ -169,11 +198,13 @@ struct NovenaView: View {
                             .frame(maxWidth: screenSize.width * 0.15)
                             .foregroundColor(.black)
                             .disabled(true)
-                        
-                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
                     }
 
-                    Spacer()
+                    ZStack {
+                        Spacer()
+                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
+                            .frame(maxHeight: .infinity)
+                    }
                     
                     VStack {
                         Toggle(isOn: $eighthDay) {
@@ -182,10 +213,16 @@ struct NovenaView: View {
                             .foregroundColor(.black)
                             .disabled(true)
                         
-                        Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
+                        //Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
                     }
   
-                    Spacer()
+                    //Spacer()
+                    
+                    ZStack {
+                        Spacer()
+                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
+                            .frame(maxHeight: .infinity)
+                    }
                     
                     Toggle(isOn: $ninthDay) {
                     }.toggleStyle(iOSCheckboxToggleStyle())
@@ -195,10 +232,17 @@ struct NovenaView: View {
                         .padding(.bottom, 16)
                 }.frame(maxHeight: candleHalfView ? screenSize.height * 0.5 : screenSize.height * 0.8) // TODO: Test later with the TabBar
                 
-            }.frame(maxWidth: screenSize.width * 0.13)
-        }.padding(.top, 0.2)
+            }
+            .frame(maxWidth: screenSize.width * 0.13)
+        }
+        .padding(.top, 0.2)
         .navigationTitle("Novena X, Dia X")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Image(systemName: "square.and.arrow.up")
+            }
+        }
     }
 }
 

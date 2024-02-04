@@ -78,7 +78,7 @@ extension View {
     func getViewSize(size: @escaping (CGSize) -> Void) -> some View {
         background(
             GeometryReader { geo in
-                Color.clear
+                Color.red // TODO: Tests purpose, change to "clear" later
                     .preference(key: ViewPreferenceKey.self, value: geo.size)
             }
         )
