@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChurchSuggestionsView: View {
     // TODO: Can reuse this screen for App Suggestions. If so, file name must be renamed
-    var subjects = ["Igreja", "Missa", "Catequese", "Crisma",  "Eventos", "Outros"]
+    let subjects = ["Igreja", "Missa", "Catequese", "Crisma",  "Eventos", "Outros"]
     let screenSize = UIScreen.main.bounds
     
     // TODO: You can use both on if statements checking isEmpty to disable the next Views

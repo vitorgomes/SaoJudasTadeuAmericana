@@ -38,6 +38,7 @@
 		E7BAF8F22B3E2A9B00DB6F21 /* SjtHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF8F12B3E2A9B00DB6F21 /* SjtHistoryView.swift */; };
 		E7BAF8F42B3E45C900DB6F21 /* PrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */; };
 		E7C6CF102B6D73A00017B482 /* PrayersSongsNovenasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C6CF0F2B6D73A00017B482 /* PrayersSongsNovenasView.swift */; };
+		E7FE51502B7197FA00E1E573 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FE514F2B7197FA00E1E573 /* NotificationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		E7BAF8F12B3E2A9B00DB6F21 /* SjtHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SjtHistoryView.swift; sourceTree = "<group>"; };
 		E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersView.swift; sourceTree = "<group>"; };
 		E7C6CF0F2B6D73A00017B482 /* PrayersSongsNovenasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersSongsNovenasView.swift; sourceTree = "<group>"; };
+		E7FE514F2B7197FA00E1E573 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				E760CB162B6EA77200656038 /* SettingsView */,
 				E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */,
 				E71D1DD52B45FB8600F55AF4 /* ChurchSuggestionsView.swift */,
+				E7FE514F2B7197FA00E1E573 /* NotificationsView.swift */,
 			);
 			path = SettingsViews;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				E7AE82FC2B55C0C400FD96A9 /* HomeConstants.swift in Sources */,
 				E71D1DD62B45FB8600F55AF4 /* ChurchSuggestionsView.swift in Sources */,
 				E7AE82FF2B55C49C00FD96A9 /* HomeRowText.swift in Sources */,
+				E7FE51502B7197FA00E1E573 /* NotificationsView.swift in Sources */,
 				E7BAF8F22B3E2A9B00DB6F21 /* SjtHistoryView.swift in Sources */,
 				E7B808392B60798900AF0AE2 /* SjtHistoryImagesRowView.swift in Sources */,
 				E7926E412B62E01300D4AFBB /* AboutCircleLogoImageView.swift in Sources */,

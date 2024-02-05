@@ -237,9 +237,11 @@ struct NovenaView: View {
         }
         .padding(.top, 0.2)
         .navigationTitle("Novena X, Dia X")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.inline) // TODO: The tiny line bellow the title when user scroll up the list is not showing, need to investigate later
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
+                // TODO: Add functionality here
+                // TODO: Check the color
                 Image(systemName: "square.and.arrow.up")
             }
         }
