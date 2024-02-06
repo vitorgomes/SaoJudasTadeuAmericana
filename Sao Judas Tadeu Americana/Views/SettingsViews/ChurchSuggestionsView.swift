@@ -34,7 +34,7 @@ struct ChurchSuggestionsView: View {
                 Picker("Por favor escolha o assunto", selection: $selectedSubject) {
                     ForEach(subjects, id: \.self) {
                         Text($0)
-                    }
+                    } // TODO: I believe the text "Por favor escolha o assunto" is for voiceOver, need to investigate later
                 }.accentColor(.black) // TODO: Need to implement color for dark mode
                     .overlay {
                         RoundedRectangle(cornerRadius: 15)

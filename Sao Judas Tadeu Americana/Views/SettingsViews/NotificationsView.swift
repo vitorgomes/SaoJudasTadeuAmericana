@@ -10,41 +10,125 @@ import SwiftUI
 struct NotificationsView: View {
     
     let screenSize = UIScreen.main.bounds
-    let massesTimeInterval = [2, 1, 30, 15, 5]
-    @State var selectedMassesTimeInterval = Int()
     
+    // Masses constants and variables
+    let massesTimeInterval = ["2 horas", "1 hora", "30 minutos", "15 minutos", "5 minutos"]
+    let massesNumberOfNotifications = ["1x", "2x", "3x"]
     @State private var massesNotifications = true
+    @State private var selectedMassesTimeInterval = ""
+    @State private var selectedMassesNumberOfNotifications = ""
+    
+    // Novenas variables
+    @State private var novenasNotifications = true
+    @State private var selectedNovenaHour = Date.now
+    
+    // Psalm constants and variables
+    let psalmsPeriodNotifications = ["Aleatório", "Manhã", "Tarde", "Noite"]
+    @State private var psalmsNotifications = true
+    @State private var selectedpsalmsPeriodNotifications = ""
     
     var body: some View {
-        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh.")
-        
-        Form {
-            Section {
-                Toggle("Notificar antes do início", isOn: $massesNotifications) // TODO: Change tint color
-//                Picker("Quanto tempo antes", selection: $selectedMassesTimeInterval) {
-//                    ForEach(massesTimeInterval, id: \.self) {
-//                        Text($0)
-//                    }
-//                }
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            } header: {
-                Text("Missas")
-            } footer: {
-                Text("oooooooooooooo") // TODO: Check the kind of information Apple does usually uses
-            }
+        VStack { // TODO: Maybe it will need to be a ScrollView, depending of the description text lenght
+            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh.")
+                .padding(.bottom, 8)
             
-            Section(header: Text("Novenas")) {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                Text("Hello, World!")
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            // Masses
+            VStack {
+                HStack {
+                    Text("Missas")
+                        .font(.title)
+                    Spacer()
+                }
+                .padding([.leading, .top], 16) // TODO: Refact like paddingLeadingAndTrailing()
+                
+                Toggle("Notificar antes do início?", isOn: $massesNotifications) // TODO: Check with designers if they usually keep "?" in this kind of situation
+                    .paddingLeadingAndTrailing()
+                
+                HStack {
+                    Text("Quanto tempo antes?")
+                    
+                    Spacer()
+                    
+                    Picker("Quanto tempo antes", selection: $selectedMassesTimeInterval) {
+                        ForEach(massesTimeInterval, id: \.self) {
+                            Text($0)
+                        }
+                    } // TODO: Modify "Quanto tempo antes" inside Picker, this option only works inside a List/Form
+                    // TODO: Change tint color
+                    // TODO: Add border
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
+                    } // TODO: Test the style of the DatePicker, black text, no border, gray background and same cornerRadius, to use a single style, if it is ok, change ChurchSuggestionsView Picker too
+                }
+                .paddingLeadingAndTrailing() // Need to adjust same as above Toggle
+                
+                VStack(alignment: .leading) {
+                    Text("Quantas vezes notificar?")
+                    
+                    Picker("Quantas vezes?", selection: $selectedMassesNumberOfNotifications) {
+                        ForEach(massesNumberOfNotifications, id: \.self) {
+                            Text($0)
+                            // TODO: Make "1x" the default value
+                        }
+                    } // TODO: Modify "Quantas vezes?" inside Picker, this option only works inside a List/Form
+                    .pickerStyle(.segmented)
+                }
+                .paddingLeadingAndTrailing()
+                .padding(.bottom, 16)
             }
+            .border(Color.black) // TODO: Need to implement color for dark mode
+            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
             
-            Section(header: Text("Salmos")) {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                Text("Hello, World!")
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            // Novenas
+            VStack {
+                HStack {
+                    Text("Novenas")
+                        .font(.title)
+                    Spacer()
+                }
+                .padding([.leading, .top], 16)
+                
+                Toggle("Notificar diariamente após início?", isOn: $novenasNotifications) // TODO: Shrink the text, if not possible add multiline possibility so the text can break in multilines
+                    .paddingLeadingAndTrailing()
+                
+                DatePicker("Horário", selection: $selectedNovenaHour, displayedComponents: .hourAndMinute)
+                    .paddingLeadingAndTrailing()
+                    .padding(.bottom, 16)
             }
+            .border(Color.black) // TODO: Need to implement color for dark mode
+            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+            
+            // Psalms
+            VStack {
+                HStack {
+                    Text("Salmos")
+                        .font(.title)
+                    Spacer()
+                }
+                .padding([.leading, .top], 16)
+                
+                Toggle("Notificar diariamente?", isOn: $psalmsNotifications)
+                    .paddingLeadingAndTrailing()
+                
+                VStack(alignment: .leading) {
+                    Text("Período?")
+                    
+                    Picker("Quantas vezes?", selection: $selectedpsalmsPeriodNotifications) {
+                        ForEach(psalmsPeriodNotifications, id: \.self) {
+                            Text($0)
+                            // TODO: Make "1x" the default value
+                        }
+                    } // TODO: Modify "Quantas vezes?" inside Picker, this option only works inside a List/Form
+                    .pickerStyle(.segmented)
+                }
+                .paddingLeadingAndTrailing()
+                .padding(.bottom, 16)
+            }
+            .border(Color.black) // TODO: Need to implement color for dark mode
+            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
         }
+        .frame(width: screenSize.width * 0.85)
         .navigationTitle("Notificações")
         .navigationBarTitleDisplayMode(.inline)
     }

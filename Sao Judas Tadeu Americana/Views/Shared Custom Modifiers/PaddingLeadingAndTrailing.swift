@@ -10,8 +10,7 @@ import SwiftUI
 struct PaddingLeadingAndTrailing: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(.leading)
-            .padding(.trailing)
+            .padding([.leading, .trailing]) // TODO: Add a paramter as possibility of number changes
     }
 }
 
