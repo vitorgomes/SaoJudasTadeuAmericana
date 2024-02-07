@@ -40,6 +40,7 @@ struct TitheView: View {
 //                }
             // TODO: Test performance with the code above
             // TODO: Add action of people can tap on the image and share. Present a full screen "Copied" effect
+            // TODO: Add default button tap blink effect when the person tap the image
             HStack {
                 Image(uiImage: qrGenerator(string: pix))
                     .interpolation(.none)
@@ -64,7 +65,7 @@ struct TitheView: View {
             }
             .frame(alignment: .center)
             
-            Text("Toque na imagem para copia")
+            Text("Também pode-se tocar na imagem para copia") // TODO: Review this text
                 .font(.footnote)
                 .foregroundColor(.gray)
                 .frame(alignment: .center)

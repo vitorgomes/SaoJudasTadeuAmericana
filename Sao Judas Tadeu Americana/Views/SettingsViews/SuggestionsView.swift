@@ -15,7 +15,7 @@ struct SuggestionsView: View {
         VStack {
             Spacer()
             
-            Text("Sugestões, comentários e feedbacks são sempre bem-vindos para aprimorar nosso trabalho. Buscamos constantemente melhorias e inovações, e este é o espaço ideal para isso.")
+            Text("Sugestões, comentários e feedbacks são sempre bem-vindos para aprimorar nosso trabalho. Buscamos constantemente melhorias e inovações, e aqui é o espaço ideal para isso.")
                 .frame(maxWidth: screenSize.width * 0.85) // TODO: Probably will need to add a maxHeight too
             
             Spacer()

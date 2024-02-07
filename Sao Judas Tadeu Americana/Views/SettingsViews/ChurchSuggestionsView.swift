@@ -35,11 +35,10 @@ struct ChurchSuggestionsView: View {
                     ForEach(subjects, id: \.self) {
                         Text($0)
                     } // TODO: I believe the text "Por favor escolha o assunto" is for voiceOver, need to investigate later
-                }.accentColor(.black) // TODO: Need to implement color for dark mode
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
-                    } // TODO: Apparently .stroke modifier is only for iOS 17, need to confirm later and also create an alternative for old versions
+                }
+                .accentColor(.blackAndWhite) // TODO: Need to implement color for dark mode
+                .background(Color(.applesLightGrayAndDarkGray))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
             }.frame(maxWidth: screenSize.width * 0.85, alignment: .leading)
             
             Text("Você selecionou o assunto: \(selectedSubject)") // TODO: Remove later. Test purposes. If i decide to keep it, please make selectedSubject text bold
@@ -57,7 +56,7 @@ struct ChurchSuggestionsView: View {
                 //.border(Color.black)
                 .overlay {
                     RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.black, lineWidth: 1) // TODO: Apparently .stroke modifier is only for iOS 17, need to confirm later and also create an alternative for old versions
+                        .stroke(Color.blackAndWhite, lineWidth: 1) // TODO: Apparently .stroke modifier is only for iOS 17, need to confirm later and also create an alternative for old versions
                             // TODO: Need to implement color for dark mode
                 }
                 .lineSpacing(5)
@@ -71,10 +70,10 @@ struct ChurchSuggestionsView: View {
                     Text("Enviar")
                 }
             } .frame(maxWidth: screenSize.width * 0.85, minHeight: 35, alignment: .center)
-            .foregroundColor(.black) // TODO: Need to implement color for dark mode
+            .foregroundColor(.blackAndWhite) // TODO: Need to implement color for dark mode
             .overlay {
                 RoundedRectangle(cornerRadius: 15)
-                    .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
+                    .stroke(Color.blackAndWhite, lineWidth: 1) // TODO: Need to implement color for dark mode
             }
             // TODO: Add a Thank You message (Popup with fading animation maybe)
             Button {
@@ -85,10 +84,10 @@ struct ChurchSuggestionsView: View {
                     Text("Voltar")
                 }
             } .frame(maxWidth: screenSize.width * 0.85, minHeight: 35, alignment: .center)
-            .foregroundColor(.black) // TODO: Need to implement color for dark mode
+            .foregroundColor(.blackAndWhite) // TODO: Need to implement color for dark mode
             .overlay {
                 RoundedRectangle(cornerRadius: 15)
-                    .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
+                    .stroke(Color.blackAndWhite, lineWidth: 1) // TODO: Need to implement color for dark mode
             }
         }
         .navigationTitle("Sugestões para a Igreja")

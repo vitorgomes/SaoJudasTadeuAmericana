@@ -56,12 +56,13 @@ struct NotificationsView: View {
                     } // TODO: Modify "Quanto tempo antes" inside Picker, this option only works inside a List/Form
                     // TODO: Change tint color
                     // TODO: Add border
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
-                    } // TODO: Test the style of the DatePicker, black text, no border, gray background and same cornerRadius, to use a single style, if it is ok, change ChurchSuggestionsView Picker too
+                    
+                    .accentColor(.blackAndWhite)
+                    .background(Color(.applesLightGrayAndDarkGray))
+                    //.background(Color(.lightGray).opacity(0.2)) // TODO: Need to review Darkmode later
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
                 }
-                .paddingLeadingAndTrailing() // Need to adjust same as above Toggle
+                .paddingLeadingAndTrailing() // TODO: Need to adjust same as above Toggle
                 
                 VStack(alignment: .leading) {
                     Text("Quantas vezes notificar?")
@@ -93,6 +94,7 @@ struct NotificationsView: View {
                     .paddingLeadingAndTrailing()
                 
                 DatePicker("Horário", selection: $selectedNovenaHour, displayedComponents: .hourAndMinute)
+                    .tint(.black)
                     .paddingLeadingAndTrailing()
                     .padding(.bottom, 16)
             }

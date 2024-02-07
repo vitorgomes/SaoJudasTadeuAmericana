@@ -18,7 +18,13 @@ struct SettingsView: View {
         VStack {
             // TODO: Add action to when tapped send to About the App screen (NavigationLink)
             ForEach(rowContents) { item in
-                SettingsRowView(settingsRowContent: item)
+                if item.title == "Notificações" { // TODO: If condition only for test purposes, remove later
+                    NavigationLink(destination: NotificationsView()) {
+                        SettingsRowView(settingsRowContent: item)
+                    }
+                } else {
+                    SettingsRowView(settingsRowContent: item)
+                }
             }
             
             // TODO: Need to figure out how to implement the getViewSize bellow in the first Row and implement the .frame(width: firstSFSymbolWidth, height: firstSFSymbolHeight) in the last image row because the questionmark SFSymbol does not get same width of the others SFSymbols (that's why i will leave the background color blue to see that). Will leave the commented code bellow for now because it is working fine when not working with SubViews
