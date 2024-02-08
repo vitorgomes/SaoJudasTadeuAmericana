@@ -13,31 +13,33 @@ struct SuggestionsView: View {
     
     var body: some View {
         VStack {
-            Spacer()
+            Spacer() // TODO: I believe it can be removed, check later
             
             Text("Sugestões, comentários e feedbacks são sempre bem-vindos para aprimorar nosso trabalho. Buscamos constantemente melhorias e inovações, e aqui é o espaço ideal para isso.")
                 .frame(maxWidth: screenSize.width * 0.85) // TODO: Probably will need to add a maxHeight too
             
+            // TODO: Maybe these three bellow (Spacer, Text and Spacer) can be embbed into a HStack, review later
             Spacer()
             
-            Text("Deseja fazer sugestões sobre:")
+            Text("Deseja fazer sugestões sobre:") // TODO: Review this text
                 .frame(alignment: .center)
             
             Spacer()
             
-            Button {
-                // TODO: Add action to when tapped send to About the App screen
+            NavigationLink {
+                ChurchAndAppSuggestionsView(selectedArea: "church")
             } label: {
                 Text("A Igreja")
-            } .frame(maxWidth: screenSize.width * 0.85, maxHeight: screenSize.height * 0.25)
-                .foregroundColor(.black) // TODO: Need to implement color for dark mode
-                //.border(Color.black)
-                //.background(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(.black, lineWidth: 1)) // TODO: Apparently .stroke modifier is only for iOS 17, need to confirm later and also create an alternative for old versions
-                // This modifier achieves the same result as above
-                .overlay {
-                    RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
-                }
+                    .frame(maxWidth: screenSize.width * 0.85, maxHeight: screenSize.height * 0.25)
+                        .foregroundColor(.black) // TODO: Need to implement color for dark mode
+                        //.border(Color.black)
+                        //.background(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(.black, lineWidth: 1)) // TODO: Apparently .stroke modifier is only for iOS 17, need to confirm later and also create an alternative for old versions
+                        // This modifier achieves the same result as above
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.black, lineWidth: 1) // TODO: Need to implement color for dark mode
+                        }
+            }
             
             Spacer()
             
@@ -45,15 +47,16 @@ struct SuggestionsView: View {
                 .frame(alignment: .center)
             
             Spacer()
-
-            Button {
-                // TODO: Add action to when tapped send to About the App screen
+            
+            NavigationLink {
+                ChurchAndAppSuggestionsView(selectedArea: "app")
             } label: {
                 Text("O App")
-            } .frame(maxWidth: screenSize.width * 0.85, maxHeight: screenSize.height * 0.25)
-            .foregroundColor(.black) // TODO: Need to implement color for dark mode
-            .border(Color.black) // TODO: Need to implement color for dark mode
-            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    .frame(maxWidth: screenSize.width * 0.85, maxHeight: screenSize.height * 0.25)
+                    .foregroundColor(.black) // TODO: Need to implement color for dark mode
+                    .border(Color.black) // TODO: Need to implement color for dark mode
+                    .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+            }
         }
         .navigationTitle("Sugestões")
         .navigationBarTitleDisplayMode(.inline)

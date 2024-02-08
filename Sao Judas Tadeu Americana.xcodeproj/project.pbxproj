@@ -14,7 +14,7 @@
 		E71757322B48C7AA005D9A20 /* NovenaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71757312B48C7A9005D9A20 /* NovenaView.swift */; };
 		E71757342B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71757332B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift */; };
 		E71D1DD42B45C47D00F55AF4 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */; };
-		E71D1DD62B45FB8600F55AF4 /* ChurchSuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D1DD52B45FB8600F55AF4 /* ChurchSuggestionsView.swift */; };
+		E71D1DD62B45FB8600F55AF4 /* ChurchAndAppSuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D1DD52B45FB8600F55AF4 /* ChurchAndAppSuggestionsView.swift */; };
 		E74235322B6B25F2000A0CC8 /* ChevronToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74235312B6B25F2000A0CC8 /* ChevronToggleStyle.swift */; };
 		E74489CD2B5083ED00039B0C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74489CC2B5083ED00039B0C /* MainView.swift */; };
 		E760CB1D2B6EAA0200656038 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E760CB1C2B6EAA0200656038 /* SettingsRowView.swift */; };
@@ -49,7 +49,7 @@
 		E71757312B48C7A9005D9A20 /* NovenaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovenaView.swift; sourceTree = "<group>"; };
 		E71757332B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
-		E71D1DD52B45FB8600F55AF4 /* ChurchSuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchSuggestionsView.swift; sourceTree = "<group>"; };
+		E71D1DD52B45FB8600F55AF4 /* ChurchAndAppSuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchAndAppSuggestionsView.swift; sourceTree = "<group>"; };
 		E74235312B6B25F2000A0CC8 /* ChevronToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChevronToggleStyle.swift; sourceTree = "<group>"; };
 		E74489CC2B5083ED00039B0C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E760CB1C2B6EAA0200656038 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 				E760CB162B6EA77200656038 /* SettingsView */,
 				E7FE514F2B7197FA00E1E573 /* NotificationsView.swift */,
 				E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */,
-				E71D1DD52B45FB8600F55AF4 /* ChurchSuggestionsView.swift */,
+				E71D1DD52B45FB8600F55AF4 /* ChurchAndAppSuggestionsView.swift */,
 			);
 			path = SettingsViews;
 			sourceTree = "<group>";
@@ -390,7 +390,7 @@
 				E71757322B48C7AA005D9A20 /* NovenaView.swift in Sources */,
 				E771C0752B3716D100C5246F /* HomeView.swift in Sources */,
 				E7AE82FC2B55C0C400FD96A9 /* HomeConstants.swift in Sources */,
-				E71D1DD62B45FB8600F55AF4 /* ChurchSuggestionsView.swift in Sources */,
+				E71D1DD62B45FB8600F55AF4 /* ChurchAndAppSuggestionsView.swift in Sources */,
 				E7AE82FF2B55C49C00FD96A9 /* HomeRowText.swift in Sources */,
 				E7FE51502B7197FA00E1E573 /* NotificationsView.swift in Sources */,
 				E7BAF8F22B3E2A9B00DB6F21 /* SjtHistoryView.swift in Sources */,

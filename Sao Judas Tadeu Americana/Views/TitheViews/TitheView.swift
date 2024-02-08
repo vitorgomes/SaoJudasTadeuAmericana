@@ -42,6 +42,7 @@ struct TitheView: View {
             // TODO: Add action of people can tap on the image and share. Present a full screen "Copied" effect
             // TODO: Add default button tap blink effect when the person tap the image
             HStack {
+                // TODO: Probably will need to remove this option because when you scan from a bank app it does not recognize it
                 Image(uiImage: qrGenerator(string: pix))
                     .interpolation(.none)
                     .resizable()

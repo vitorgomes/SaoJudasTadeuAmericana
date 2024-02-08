@@ -7,16 +7,18 @@
 
 import SwiftUI
 
-struct ChurchSuggestionsView: View {
-    // TODO: Can reuse this screen for App Suggestions. If so, file name must be renamed
-    let subjects = ["Igreja", "Missa", "Catequese", "Crisma",  "Eventos", "Outros"]
+struct ChurchAndAppSuggestionsView: View {
+    let churchSubjects = ["Igreja", "Missa", "Catequese", "Crisma",  "Eventos", "Outros"] // TODO: Check later a way to display a default value like "Assunto" or blank
+    let appSubjects = ["Problema técnico", "Interface", "Performance", "Outros"] // TODO: Check later a way to display a default value like "Assunto" or blank
     let screenSize = UIScreen.main.bounds
     
     // TODO: You can use both on if statements checking isEmpty to disable the next Views
     @State private var selectedSubject = ""
     @State private var suggestionText = ""
     
-    @Environment (\.dismiss) var dismiss
+    @State var selectedArea: String
+    
+    //@Environment (\.dismiss) var dismiss // TODO: If remove the comment starts to ask it on SuggestionsView. Need to check later how to pass it as paramter
     
     var body: some View {
         // TODO: Disable all views bellow the first (Picker). This way will force the user follow step by step of the screen
@@ -26,13 +28,16 @@ struct ChurchSuggestionsView: View {
         VStack {
             // TODO: Maybe add a text describing the screen
             HStack(spacing: 0) {
-                Text("1º: Selecione o assunto: ") // TODO: Test "1º" with bold style
+                Text("**1º:** Selecione o assunto: ") // TODO: Test "1º" with bold style
                 
                 // TODO: Verify the official article about Picker from Apple. It uses Enum instead of Array
                 // TODO:  Add a maxWidth for this but test multine because of "Catequese/Crisma" option
                 // TODO: Search to see if there is anyway to keep it empty when user access the page and did not selected anything yet, or a placeholder
+                
+                Spacer()
+
                 Picker("Por favor escolha o assunto", selection: $selectedSubject) {
-                    ForEach(subjects, id: \.self) {
+                    ForEach(selectedArea == "church" ? churchSubjects : appSubjects, id: \.self) {
                         Text($0)
                     } // TODO: I believe the text "Por favor escolha o assunto" is for voiceOver, need to investigate later
                 }
@@ -42,10 +47,10 @@ struct ChurchSuggestionsView: View {
             }.frame(maxWidth: screenSize.width * 0.85, alignment: .leading)
             
             Text("Você selecionou o assunto: \(selectedSubject)") // TODO: Remove later. Test purposes. If i decide to keep it, please make selectedSubject text bold
-                .frame(maxWidth: screenSize.width * 0.85, alignment: .leading)
+                .frame(maxWidth: screenSize.width * 0.85, alignment: .leading) // TODO: Test later use this width size in the main VStack
                 .padding(.bottom)
-            
-            Text("2º: Escreva o que você gostaria de sugerir ou comentar sobre o assunto selecionado:") // TODO:  Add a maxWidth for this but test multine
+
+            Text("**2º:** Escreva o que você gostaria de sugerir ou comentar sobre o assunto selecionado:") // TODO:  Add a maxWidth for this but test multine
                 // TODO: Test "2º" with bold style
                 .lineLimit(2)
                 .multilineTextAlignment(.leading)
@@ -98,6 +103,6 @@ struct ChurchSuggestionsView: View {
 
 #Preview {
     NavigationStack {
-        ChurchSuggestionsView()
+        ChurchAndAppSuggestionsView(selectedArea: "church")
     }
 }
