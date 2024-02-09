@@ -10,16 +10,7 @@ import SwiftUI
 struct PrayersSongsNovenasView: View {
     var body: some View {
         List {
-            HStack {
-                Text("🤲")
-                    .font(.title)
-                    .padding(.trailing, 8)
-                VStack(alignment: .leading) {
-                    Text("Orações")
-                        .font(.title)
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.ooooooooooooo") // TODO: Test trailing padding here, when the text is long
-                }
-            }
+            PrayersSongsNovenasRowView()
             
             HStack {
                 Text("🎵")

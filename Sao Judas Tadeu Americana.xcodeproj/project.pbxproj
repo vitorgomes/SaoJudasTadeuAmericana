@@ -32,6 +32,8 @@
 		E7AE82FC2B55C0C400FD96A9 /* HomeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE82FB2B55C0C400FD96A9 /* HomeConstants.swift */; };
 		E7AE82FF2B55C49C00FD96A9 /* HomeRowText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE82FE2B55C49C00FD96A9 /* HomeRowText.swift */; };
 		E7AE83012B55CA4300FD96A9 /* HomeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE83002B55CA4300FD96A9 /* HomeRowView.swift */; };
+		E7B737252B76C2B1005A40B2 /* PrayersSongsNovenasRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B737242B76C2B1005A40B2 /* PrayersSongsNovenasRowView.swift */; };
+		E7B737272B76C41B005A40B2 /* PrayersSongsNovenasRowContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B737262B76C41B005A40B2 /* PrayersSongsNovenasRowContent.swift */; };
 		E7B808342B6057D300AF0AE2 /* SjtHistoryCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B808332B6057D300AF0AE2 /* SjtHistoryCircleImageView.swift */; };
 		E7B808372B606EE500AF0AE2 /* SjtHistoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B808362B606EE500AF0AE2 /* SjtHistoryImage.swift */; };
 		E7B808392B60798900AF0AE2 /* SjtHistoryImagesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B808382B60798900AF0AE2 /* SjtHistoryImagesRowView.swift */; };
@@ -68,6 +70,8 @@
 		E7AE82FB2B55C0C400FD96A9 /* HomeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConstants.swift; sourceTree = "<group>"; };
 		E7AE82FE2B55C49C00FD96A9 /* HomeRowText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRowText.swift; sourceTree = "<group>"; };
 		E7AE83002B55CA4300FD96A9 /* HomeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRowView.swift; sourceTree = "<group>"; };
+		E7B737242B76C2B1005A40B2 /* PrayersSongsNovenasRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersSongsNovenasRowView.swift; sourceTree = "<group>"; };
+		E7B737262B76C41B005A40B2 /* PrayersSongsNovenasRowContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersSongsNovenasRowContent.swift; sourceTree = "<group>"; };
 		E7B808332B6057D300AF0AE2 /* SjtHistoryCircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SjtHistoryCircleImageView.swift; sourceTree = "<group>"; };
 		E7B808362B606EE500AF0AE2 /* SjtHistoryImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SjtHistoryImage.swift; sourceTree = "<group>"; };
 		E7B808382B60798900AF0AE2 /* SjtHistoryImagesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SjtHistoryImagesRowView.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			children = (
 				E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */,
 				E7C6CF0F2B6D73A00017B482 /* PrayersSongsNovenasView.swift */,
+				E7B737242B76C2B1005A40B2 /* PrayersSongsNovenasRowView.swift */,
 				E702908E2B68835A00F0FDB7 /* SubViews */,
 			);
 			path = PrayersView;
@@ -264,6 +269,7 @@
 				E7926E432B62E0AA00D4AFBB /* AboutImage.swift */,
 				E79701A22B68785400E68417 /* PrayersRoundedRectangleText.swift */,
 				E760CB202B6EB2A800656038 /* SettingsRowContent.swift */,
+				E7B737262B76C41B005A40B2 /* PrayersSongsNovenasRowContent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 				E760CB1D2B6EAA0200656038 /* SettingsRowView.swift in Sources */,
 				E7BAF8F42B3E45C900DB6F21 /* PrayersView.swift in Sources */,
 				E74235322B6B25F2000A0CC8 /* ChevronToggleStyle.swift in Sources */,
+				E7B737252B76C2B1005A40B2 /* PrayersSongsNovenasRowView.swift in Sources */,
 				E7A396F52B3F67D300A3ADE7 /* TitheView.swift in Sources */,
 				E71757322B48C7AA005D9A20 /* NovenaView.swift in Sources */,
 				E771C0752B3716D100C5246F /* HomeView.swift in Sources */,
@@ -399,6 +406,7 @@
 				E71603F72B3CE917000E30F8 /* AboutView.swift in Sources */,
 				E700EB822B6441E1004909EF /* ShareLinkView.swift in Sources */,
 				E7926E442B62E0AA00D4AFBB /* AboutImage.swift in Sources */,
+				E7B737272B76C41B005A40B2 /* PrayersSongsNovenasRowContent.swift in Sources */,
 				E79701A12B6877B600E68417 /* PrayersRoundedRectangleView.swift in Sources */,
 				E7B808372B606EE500AF0AE2 /* SjtHistoryImage.swift in Sources */,
 				E7614E3C2B69952B00389648 /* PaddingLeadingAndTrailing.swift in Sources */,
