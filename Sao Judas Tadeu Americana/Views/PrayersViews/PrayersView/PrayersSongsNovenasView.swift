@@ -10,7 +10,10 @@ import SwiftUI
 struct PrayersSongsNovenasView: View {
     var body: some View {
         List {
-            PrayersSongsNovenasRowView()
+            ForEach(prayersSongsNovenasRowContents) { item in
+                PrayersSongsNovenasRowView(userSelection: "Orações", prayersSongsNovenasRowContent: item)
+            }
+            
             
             HStack {
                 Text("🎵")
@@ -33,8 +36,7 @@ struct PrayersSongsNovenasView: View {
                     Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.ooooooooooooooooooooooooooo")
                 }
             }
-            //.background(Color(.blue))
-            .overlayedPulsingFireAnimation(paddingSize: 0)
+            .overlayedPulsingFireAnimation(paddingSize: 0) // TODO: Need to add logic to implement this when user has an ongoing Novena
         }
         .navigationTitle("Orações / Cantos / Novenas") // TODO: Make the title dynamic using the option the user chose in the previous screen
         .navigationBarTitleDisplayMode(.inline)

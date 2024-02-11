@@ -10,21 +10,23 @@ import SwiftUI
 struct PrayersSongsNovenasRowView: View {
     
     @State var userSelection: String
+    var prayersSongsNovenasRowContent: PrayersSongsNovenasRowContent
     
     var body: some View {
         HStack {
-            Text("🤲")
+            Text(prayersSongsNovenasRowContent.emoji)
                 .font(.title)
                 .padding(.trailing, 8)
             VStack(alignment: .leading) {
-                Text("Orações")
+                Text(prayersSongsNovenasRowContent.title)
                     .font(.title)
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.ooooooooooooo") // TODO: Test trailing padding here, when the text is long
+                Text(prayersSongsNovenasRowContent.description) // TODO: Test trailing padding here, when the text is long
             }
         }
     }
 }
 
+// Use for test purposes
 #Preview {
-    PrayersSongsNovenasRowView(userSelection: "prayer")
+    PrayersSongsNovenasRowView(userSelection: "Orações", prayersSongsNovenasRowContent: prayersSongsNovenasRowContents.first!)
 }

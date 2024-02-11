@@ -27,6 +27,7 @@ struct HomeRowText: Identifiable {
 }
 
 // TODO: I believe the name need to be changed
+// TODO: This is responsability of ViewModel, need to remove it when implement MVVM
 var rowTexts = [
     HomeRowText(title: "História de São Judas Tadeu", 
                 content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in risus ut dui congue venenatis. Maecenas viverra a lectus vitae molestie. Aliquam aliquet vestibulum congue. Aliquam eu elit quis sem commodo tristique sit amet quis quam. Donec tincidunt magna risus, ac cursus massa placerat eu" + HomeConstants.threeDots,

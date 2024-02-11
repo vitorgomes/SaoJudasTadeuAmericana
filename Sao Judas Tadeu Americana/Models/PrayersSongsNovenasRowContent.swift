@@ -15,6 +15,7 @@ struct PrayersSongsNovenasRowContent: Identifiable {
 }
 
 // TODO: Sample data, replace later when SwiftData or CoreData implemented
+// TODO: This is responsability of ViewModel, need to remove it when implement MVVM
 var prayersSongsNovenasRowContents = [
     PrayersSongsNovenasRowContent(emoji: "🤲", title: "Orações", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.ooooooooooooo"),
     PrayersSongsNovenasRowContent(emoji: "🤲", title: "Orações", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.ooooooooooooo"),

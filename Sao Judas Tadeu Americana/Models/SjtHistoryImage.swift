@@ -14,6 +14,7 @@ struct SjtHistoryImage: Identifiable {
 
 
 // TODO: Probably there is a way to add 1, 2, 3... through the ForEach. Need to search for something related to "ForEach range"
+// TODO: This is responsability of ViewModel, need to remove it when implement MVVM
 var imagesGroup1 = [
     SjtHistoryImage(name: "sjtHistory1"),
     SjtHistoryImage(name: "sjtHistory2")

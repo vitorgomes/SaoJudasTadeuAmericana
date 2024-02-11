@@ -15,6 +15,7 @@ struct PrayersRoundedRectangleText: Identifiable, Equatable {
 }
 
 // TODO: "Cantos" or "Canções"
+// TODO: This is responsability of ViewModel, need to remove it when implement MVVM
 var viewTexts = [
     PrayersRoundedRectangleText(emoji: "🤲", title: "Orações", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"),
     PrayersRoundedRectangleText(emoji: "🎵", title: "Cantos", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"),

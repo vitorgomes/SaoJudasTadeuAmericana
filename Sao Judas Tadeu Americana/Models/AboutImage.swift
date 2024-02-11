@@ -12,6 +12,7 @@ struct AboutImage: Identifiable {
     var name = String()
 }
 
+// TODO: This is responsability of ViewModel, need to remove it when implement MVVM
 var images = [
     AboutImage(name: "instagramLogo"),
     AboutImage(name: "whatsappLogo"),
