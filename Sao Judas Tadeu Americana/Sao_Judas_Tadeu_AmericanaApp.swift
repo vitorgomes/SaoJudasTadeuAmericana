@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct Sao_Judas_Tadeu_AmericanaApp: App {
@@ -15,5 +16,6 @@ struct Sao_Judas_Tadeu_AmericanaApp: App {
                 MainView()
             }
         }
+        .modelContainer(for: Prayer.self)
     }
 }
