@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+//import SwiftData
 
 struct PrayersSongsNovenasRowView: View {
+    
+    //@Query var prayers: [Prayer]
     
     @State var userSelection: String
     var prayersSongsNovenasRowContent: PrayersSongsNovenasRowContent

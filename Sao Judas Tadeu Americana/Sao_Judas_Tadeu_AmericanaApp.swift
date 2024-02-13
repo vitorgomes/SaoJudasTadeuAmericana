@@ -16,6 +16,6 @@ struct Sao_Judas_Tadeu_AmericanaApp: App {
                 MainView()
             }
         }
-        .modelContainer(for: Prayer.self)
+        //.modelContainer(for: Prayer.self)
     }
 }

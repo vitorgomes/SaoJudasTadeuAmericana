@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SwiftData
+//import SwiftData
 
 struct PrayersSongsNovenasView: View {
     var body: some View {

@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 
+// TODO: Change AboutView name to something more specific since there is a AboutAppView now
 struct AboutView: View {
     
     let churchLocation = CLLocationCoordinate2D(latitude: -22.750035511019487, longitude: -47.358945254521316)

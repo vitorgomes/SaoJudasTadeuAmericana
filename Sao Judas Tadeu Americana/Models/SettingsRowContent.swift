@@ -17,7 +17,6 @@ struct SettingsRowContent: Identifiable, Equatable {
 // TODO: I believe the name need to be changed
 // TODO: This is responsability of ViewModel, need to remove it when implement MVVM
 var rowContents = [
-    SettingsRowContent(sfSymbol: "slider.horizontal.3", title: "Aparência", description: "Troque o tema de cores"),
     SettingsRowContent(sfSymbol: "app.badge", title: "Notificações", description: "Ajuste a quantidade e frequência"),
     SettingsRowContent(sfSymbol: "star.fill", title: "Sugestões", description: "Compartilhe sua opinião"),
     SettingsRowContent(sfSymbol: "questionmark", title: "Sobre", description: "Saiba mais sobre o aplicativo")
