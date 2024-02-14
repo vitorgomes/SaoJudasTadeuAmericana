@@ -22,8 +22,17 @@ struct SettingsView: View {
                     NavigationLink(destination: NotificationsView()) {
                         SettingsRowView(settingsRowContent: item)
                     }
+                    .accentColor(Color(.black))
+                } else if item.title == "Sugestões" {
+                    NavigationLink(destination: SuggestionsView()) {
+                        SettingsRowView(settingsRowContent: item)
+                    }
+                    .accentColor(Color(.black))
                 } else {
-                    SettingsRowView(settingsRowContent: item)
+                    NavigationLink(destination: AboutAppView()) {
+                        SettingsRowView(settingsRowContent: item)
+                    }
+                    .accentColor(Color(.black))
                 }
             }
             

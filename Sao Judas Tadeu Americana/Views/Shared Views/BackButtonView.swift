@@ -17,7 +17,7 @@ struct BackButtonView: View {
             dismiss()
         } label: {
             HStack {
-                Image(systemName: "chevron.backward.square")
+                Image(systemName: "chevron.backward")
                 Text("Voltar")
             }
         }
