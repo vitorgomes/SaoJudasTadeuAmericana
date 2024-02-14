@@ -23,7 +23,7 @@ struct AboutAppView: View {
                 Spacer()
             }
             
-            HStack {
+            HStack { // TODO: Getting half separator, need to investigate
                 Spacer ()
                 
                 // MARK: Version

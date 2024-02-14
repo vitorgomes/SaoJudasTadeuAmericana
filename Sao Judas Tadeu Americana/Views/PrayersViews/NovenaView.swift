@@ -29,7 +29,7 @@ struct NovenaView: View {
     
     var body: some View {
         HStack {
-            // List + Done and Back Buttons
+            // MARK: List + Done and Back Buttons
             ZStack(alignment: .bottom) {
                 List {
                     Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.") // TODO: Replace Lorem Ipsum text
@@ -37,7 +37,7 @@ struct NovenaView: View {
                 // TODO: Bellow .background and .scrollContentBackground modifiers are for tests purpose, remove later
                 .background(.red)
                 .scrollContentBackground(.hidden)
-                .padding(.bottom, 16  + buttonsHeight) // TODO: Need to discover why bottom is getting this white rectangle every time adds the buttonsHeight variable
+                .padding(.bottom, 16 + buttonsHeight) // TODO: Need to discover why bottom is getting this white rectangle every time adds the buttonsHeight variable
                 .edgesIgnoringSafeArea(.bottom)
                 
                 VStack(spacing: 8) {
@@ -71,12 +71,13 @@ struct NovenaView: View {
                     buttonsHeight = size.height
                     print(buttonsHeight) // TODO: Tests purpose, remove later
                 }
+                //.background(Color(.clear))
                 //.frame(width: 100)
                 //.background(Color(.red))
                 //.padding(.bottom, 16)
             }
             
-            // Chevron Toggle + Candle Toggles
+            // MARK:  Chevron Toggle + Candle Toggles
             VStack {
                 Toggle(isOn: $candleHalfView) {
                 }.toggleStyle(ChevronToggleStyle())

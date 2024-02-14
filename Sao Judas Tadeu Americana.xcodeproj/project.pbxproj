@@ -19,6 +19,7 @@
 		E74489CD2B5083ED00039B0C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74489CC2B5083ED00039B0C /* MainView.swift */; };
 		E74B69842B79BB12003345F0 /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74B69832B79BB12003345F0 /* Prayer.swift */; };
 		E74C957D2B7AE6E600FD9938 /* AboutAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C957C2B7AE6E500FD9938 /* AboutAppView.swift */; };
+		E75AE5B52B7C47010039A0C5 /* PrayerSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75AE5B42B7C47010039A0C5 /* PrayerSongView.swift */; };
 		E760CB1D2B6EAA0200656038 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E760CB1C2B6EAA0200656038 /* SettingsRowView.swift */; };
 		E760CB212B6EB2A800656038 /* SettingsRowContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E760CB202B6EB2A800656038 /* SettingsRowContent.swift */; };
 		E7614E3C2B69952B00389648 /* PaddingLeadingAndTrailing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7614E3B2B69952B00389648 /* PaddingLeadingAndTrailing.swift */; };
@@ -58,6 +59,7 @@
 		E74489CC2B5083ED00039B0C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E74B69832B79BB12003345F0 /* Prayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
 		E74C957C2B7AE6E500FD9938 /* AboutAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppView.swift; sourceTree = "<group>"; };
+		E75AE5B42B7C47010039A0C5 /* PrayerSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerSongView.swift; sourceTree = "<group>"; };
 		E760CB1C2B6EAA0200656038 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		E760CB202B6EB2A800656038 /* SettingsRowContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowContent.swift; sourceTree = "<group>"; };
 		E7614E3B2B69952B00389648 /* PaddingLeadingAndTrailing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLeadingAndTrailing.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */,
 				E7C6CF0F2B6D73A00017B482 /* PrayersSongsNovenasView.swift */,
 				E7B737242B76C2B1005A40B2 /* PrayersSongsNovenasRowView.swift */,
+				E75AE5B42B7C47010039A0C5 /* PrayerSongView.swift */,
 				E702908E2B68835A00F0FDB7 /* SubViews */,
 			);
 			path = PrayersView;
@@ -409,6 +412,7 @@
 				E7BAF8F22B3E2A9B00DB6F21 /* SjtHistoryView.swift in Sources */,
 				E7B808392B60798900AF0AE2 /* SjtHistoryImagesRowView.swift in Sources */,
 				E7926E412B62E01300D4AFBB /* AboutCircleLogoImageView.swift in Sources */,
+				E75AE5B52B7C47010039A0C5 /* PrayerSongView.swift in Sources */,
 				E71603F72B3CE917000E30F8 /* AboutView.swift in Sources */,
 				E700EB822B6441E1004909EF /* ShareLinkView.swift in Sources */,
 				E7926E442B62E0AA00D4AFBB /* AboutImage.swift in Sources */,
