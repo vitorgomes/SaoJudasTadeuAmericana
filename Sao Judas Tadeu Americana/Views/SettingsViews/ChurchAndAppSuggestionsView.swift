@@ -14,7 +14,7 @@ struct ChurchAndAppSuggestionsView: View {
     
     // TODO: You can use both on if statements checking isEmpty to disable the next Views
     @State private var selectedSubject = ""
-    @State private var suggestionText = ""
+    @State private var suggestionText = "Digite o seu texto aqui"
     
     @State var selectedArea: String
     
@@ -64,7 +64,28 @@ struct ChurchAndAppSuggestionsView: View {
                         .stroke(Color.blackAndWhite, lineWidth: 1) // TODO: Apparently .stroke modifier is only for iOS 17, need to confirm later and also create an alternative for old versions
                             // TODO: Need to implement color for dark mode
                 }
-                .lineSpacing(5)
+                .foregroundColor(self.suggestionText == "Digite o seu texto aqui" ? .gray : .primary)
+                .lineSpacing(4)
+                .onAppear {
+                    // TODO: While testing show/hide keyboard the View showed a strange behavior that shrink all View contents to adapt the keyboard. Need to investigate it
+                    // SHOW keyboard
+                    NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { notification in
+                        withAnimation {
+                            if self.suggestionText == "Digite o seu texto aqui" {
+                                self.suggestionText = ""
+                            }
+                        }
+                    }
+                    
+                    // HIDE keyboard
+                    NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { notification in
+                        withAnimation {
+                            if self.suggestionText == "" {
+                                self.suggestionText = "Digite o seu texto aqui"
+                            }
+                        }
+                    }
+                }
                 .padding()
             
             Button {
