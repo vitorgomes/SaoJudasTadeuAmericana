@@ -27,7 +27,7 @@ struct SuggestionsView: View {
             Spacer()
             
             NavigationLink {
-                ChurchAndAppSuggestionsView(selectedArea: "church")
+                ChurchAppSuggestionsView(selectedArea: "church")
             } label: {
                 Text("A Igreja")
                     .frame(maxWidth: screenSize.width * 0.85, maxHeight: screenSize.height * 0.25)
@@ -49,7 +49,7 @@ struct SuggestionsView: View {
             Spacer()
             
             NavigationLink {
-                ChurchAndAppSuggestionsView(selectedArea: "app")
+                ChurchAppSuggestionsView(selectedArea: "app")
             } label: {
                 Text("O App")
                     .frame(maxWidth: screenSize.width * 0.85, maxHeight: screenSize.height * 0.25)

@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ChurchAndAppSuggestionsView: View {
+
+struct ChurchAppSuggestionsView: View {
     let churchSubjects = ["Igreja", "Missa", "Catequese", "Crisma",  "Eventos", "Outros"] // TODO: Check later a way to display a default value like "Assunto" or blank
     let appSubjects = ["Problema técnico", "Interface", "Performance", "Outros"] // TODO: Check later a way to display a default value like "Assunto" or blank
     let screenSize = UIScreen.main.bounds
@@ -91,7 +92,9 @@ struct ChurchAndAppSuggestionsView: View {
             Button {
                 // TODO: Add action to when tapped send an email to Church's email address
 //                sendEmail(emailText: suggestionText)
-                EmailSender.shared.sendEmail(subject: "church", body: suggestionText, to: ["vitorgomes_silva@outlook.com"])
+//                EmailSender.shared.sendEmail(subject: selectedSubject, body: suggestionText, to: "vitorgomes_silva@outlook.com") // TODO: Not working at all, need to investigate why
+//                self.isShowingMailView.toggle()
+//                self.emIsShow.toggle()
             } label: {
                 HStack {
                     Image(systemName: "paperplane")
@@ -103,6 +106,31 @@ struct ChurchAndAppSuggestionsView: View {
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(Color.blackAndWhite, lineWidth: 1) // TODO: Need to implement color for dark mode
             }
+            //---------
+            
+//            Button(action: {
+//                  showMailView.toggle()
+//                }) {
+//                  Text("Send mail")
+//                }
+//                .sheet(isPresented: $showMailView) {
+//                  MailView(data: $mailData) { result in
+//                    print(result)
+//                   }
+//                }
+//            .sheet(isPresented: $isShowingMailView) {
+//                        MailView(isShowing: self.$isShowingMailView, result: self.$result)
+//            }
+//            .sheet(isPresented: $emIsShow) {
+//                MailView(result: $emResult, recipient: ["vitorgomes_silva@outlook.com"], subject: "Test email", body: "Test body")
+//            }
+            
+//            Button(action: {self.emIsShow.toggle()})
+//                {Text("Email Us")}
+//                .sheet(isPresented: $emIsShow) {
+//                    MailView(result: $emResult, recipient: ["vitorgomes_silva@outlook.com"], subject: "test", body: "test")
+//                }
+
             // TODO: Add a Thank You message (Popup with fading animation maybe)
             Button {
                 // TODO: Add action to when tapped send an email to Church's email address
@@ -139,7 +167,7 @@ struct ChurchAndAppSuggestionsView: View {
 
 #Preview {
     NavigationStack {
-        ChurchAndAppSuggestionsView(selectedArea: "church")
+        ChurchAppSuggestionsView(selectedArea: "church")
     }
 }
 
