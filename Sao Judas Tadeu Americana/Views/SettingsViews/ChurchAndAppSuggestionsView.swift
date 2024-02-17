@@ -90,6 +90,8 @@ struct ChurchAndAppSuggestionsView: View {
             
             Button {
                 // TODO: Add action to when tapped send an email to Church's email address
+//                sendEmail(emailText: suggestionText)
+                EmailSender.shared.sendEmail(subject: "church", body: suggestionText, to: ["vitorgomes_silva@outlook.com"])
             } label: {
                 HStack {
                     Image(systemName: "paperplane")
@@ -120,6 +122,19 @@ struct ChurchAndAppSuggestionsView: View {
         .navigationBarTitleDisplayMode(.inline)
         //.padding(.bottom, 16) TODO: Check if it will be necessary
     }
+    
+//    func sendEmail(emailText: String) {
+//        guard MFMailComposeViewController.canSendMail() else {
+//            print("Not possible to send email in this device")
+//            return
+//        }
+//        
+//        let mailComposeViewController = MFMailComposeViewController()
+//        mailComposeViewController.setMessageBody(emailText, isHTML: false)
+//        mailComposeViewController.mailComposeDelegate = self
+//        
+//        UIApplication.shared.windows.first?.rootViewController?.present(mailComposeViewController, animated: false, completion: nil)
+//    }
 }
 
 #Preview {
@@ -127,3 +142,9 @@ struct ChurchAndAppSuggestionsView: View {
         ChurchAndAppSuggestionsView(selectedArea: "church")
     }
 }
+
+//extension ChurchAndAppSuggestionsView: MFMailComposeViewControllerDelegate {
+//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+//        controller.dismiss(animated: false, completion: nil)
+//    }
+//}
