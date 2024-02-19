@@ -45,7 +45,8 @@ struct NotificationsView: View {
                     .paddingLeadingAndTrailing()
                 
                 HStack {
-                    Text("Quanto tempo antes?")
+//                    Text("Quanto tempo antes?")
+//                        .foregroundStyle(massesNotifications ? .blackAndWhite : .gray)
                     
                     Spacer()
                     
@@ -56,7 +57,7 @@ struct NotificationsView: View {
                     } // TODO: Modify "Quanto tempo antes" inside Picker, this option only works inside a List/Form
                     // TODO: Change tint color
                     // TODO: Add border
-                    
+                    .disabled(massesNotifications == false)
                     .accentColor(.blackAndWhite)
                     .background(Color(.applesLightGrayAndDarkGray))
                     //.background(Color(.lightGray).opacity(0.2)) // TODO: Need to review Darkmode later
@@ -66,6 +67,7 @@ struct NotificationsView: View {
                 
                 VStack(alignment: .leading) {
                     Text("Quantas vezes notificar?")
+                        .foregroundStyle(massesNotifications ? .blackAndWhite : .gray)
                     
                     Picker("Quantas vezes?", selection: $selectedMassesNumberOfNotifications) {
                         ForEach(massesNumberOfNotifications, id: \.self) {
@@ -73,6 +75,7 @@ struct NotificationsView: View {
                             // TODO: Make "1x" the default value
                         }
                     } // TODO: Modify "Quantas vezes?" inside Picker, this option only works inside a List/Form
+                    .disabled(massesNotifications == false)
                     .pickerStyle(.segmented)
                 }
                 .paddingLeadingAndTrailing()
@@ -94,7 +97,9 @@ struct NotificationsView: View {
                     .paddingLeadingAndTrailing()
                 
                 DatePicker("Horário", selection: $selectedNovenaHour, displayedComponents: .hourAndMinute)
-                    .tint(.black)
+                    .disabled(novenasNotifications == false)
+                    .foregroundStyle(novenasNotifications ? .blackAndWhite : .gray)
+                    .tint(.blackAndWhite)
                     .paddingLeadingAndTrailing()
                     .padding(.bottom, 16)
             }
@@ -115,6 +120,7 @@ struct NotificationsView: View {
                 
                 VStack(alignment: .leading) {
                     Text("Período?")
+                        .foregroundStyle(psalmsNotifications ? .blackAndWhite : .gray)
                     
                     Picker("Quantas vezes?", selection: $selectedpsalmsPeriodNotifications) {
                         ForEach(psalmsPeriodNotifications, id: \.self) {
@@ -122,6 +128,7 @@ struct NotificationsView: View {
                             // TODO: Make "1x" the default value
                         }
                     } // TODO: Modify "Quantas vezes?" inside Picker, this option only works inside a List/Form
+                    .disabled(psalmsNotifications == false)
                     .pickerStyle(.segmented)
                 }
                 .paddingLeadingAndTrailing()

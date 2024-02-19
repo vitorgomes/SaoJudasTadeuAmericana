@@ -46,6 +46,7 @@ struct MainView: View {
     }
 }
 
+// TODO: Move to a dedicated file and remove from MainView. I believe it is better to start the checks on SplashScreen
 extension MainView {
     func notificationAuthorization() {
         center.requestAuthorization(options: [.alert, .sound, .badge, .provisional]) { success, error in
