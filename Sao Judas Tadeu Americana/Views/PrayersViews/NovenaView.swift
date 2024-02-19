@@ -87,8 +87,7 @@ struct NovenaView: View {
                     .frame(width: 50, height: 50) // TODO: Add a dynamic size, or a max min one
                 
                 if candleHalfView {
-                    VStack {
-                        // VStack used to create half space, when user wants to make the candle near to bottom, to make easy fingers reach out
+                    VStack {// VStack used to create half space, when user wants to make the candle near to bottom, to make easy fingers reach out
                     }.frame(maxHeight: screenSize.height * 0.5)
                 } else {
                     Spacer() // Makes space between candle stack and chevrondown/up Toggle consequently make the toggle be fixed to the top
@@ -114,11 +113,7 @@ struct NovenaView: View {
                             .foregroundColor(.black) // TODO: Need to implement color for dark mode
                     }
 
-                    ZStack {
-                        Spacer()
-                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
-                            .frame(maxHeight: .infinity)
-                    }
+                    ProgressVerticalLineView()
                     
                     VStack {
                         Toggle(isOn: $secondDay) {
@@ -128,11 +123,7 @@ struct NovenaView: View {
                             .disabled(true)
                     }
                     
-                    ZStack {
-                        Spacer()
-                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
-                            .frame(maxHeight: .infinity)
-                    }
+                    ProgressVerticalLineView()
                     
                     VStack {
                         Toggle(isOn: $thirdDay) {
@@ -142,11 +133,7 @@ struct NovenaView: View {
                             .disabled(true)
                     }
 
-                    ZStack {
-                        Spacer()
-                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
-                            .frame(maxHeight: .infinity)
-                    }
+                    ProgressVerticalLineView()
                     
                     VStack {
                         Toggle(isOn: $fourthDay) {
@@ -156,11 +143,7 @@ struct NovenaView: View {
                             .disabled(true)
                     }
                     
-                    ZStack {
-                        Spacer()
-                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
-                            .frame(maxHeight: .infinity)
-                    }
+                    ProgressVerticalLineView()
                     
                     VStack {
                         Toggle(isOn: $fifthDay) {
@@ -168,16 +151,9 @@ struct NovenaView: View {
                             .frame(maxWidth: screenSize.width * 0.15)
                             .foregroundColor(.black)
                             .disabled(true)
-                        
-                        //Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
                     }
                     
-                    //Spacer()
-                    ZStack {
-                        Spacer()
-                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
-                            .frame(maxHeight: .infinity)
-                    }
+                    ProgressVerticalLineView()
                     
                     VStack {
                         Toggle(isOn: $sixthDay) {
@@ -187,11 +163,7 @@ struct NovenaView: View {
                             .disabled(true)
                     }
                     
-                    ZStack {
-                        Spacer()
-                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
-                            .frame(maxHeight: .infinity)
-                    }
+                    ProgressVerticalLineView()
                     
                     VStack {
                         Toggle(isOn: $seventhDay) {
@@ -201,11 +173,7 @@ struct NovenaView: View {
                             .disabled(true)
                     }
 
-                    ZStack {
-                        Spacer()
-                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
-                            .frame(maxHeight: .infinity)
-                    }
+                    ProgressVerticalLineView()
                     
                     VStack {
                         Toggle(isOn: $eighthDay) {
@@ -213,17 +181,9 @@ struct NovenaView: View {
                             .frame(maxWidth: screenSize.width * 0.15)
                             .foregroundColor(.black)
                             .disabled(true)
-                        
-                        //Rectangle().fill(Color.black).frame(width: 1, height: 8, alignment: .center)
                     }
   
-                    //Spacer()
-                    
-                    ZStack {
-                        Spacer()
-                            .background(Rectangle().fill(Color.black).frame(width: 1, alignment: .center))
-                            .frame(maxHeight: .infinity)
-                    }
+                    ProgressVerticalLineView()
                     
                     Toggle(isOn: $ninthDay) {
                     }.toggleStyle(iOSCheckboxToggleStyle())

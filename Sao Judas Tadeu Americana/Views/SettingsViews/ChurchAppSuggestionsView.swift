@@ -91,10 +91,6 @@ struct ChurchAppSuggestionsView: View {
             
             Button {
                 // TODO: Add action to when tapped send an email to Church's email address
-//                sendEmail(emailText: suggestionText)
-//                EmailSender.shared.sendEmail(subject: selectedSubject, body: suggestionText, to: "vitorgomes_silva@outlook.com") // TODO: Not working at all, need to investigate why
-//                self.isShowingMailView.toggle()
-//                self.emIsShow.toggle()
             } label: {
                 HStack {
                     Image(systemName: "paperplane")
@@ -106,31 +102,6 @@ struct ChurchAppSuggestionsView: View {
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(Color.blackAndWhite, lineWidth: 1) // TODO: Need to implement color for dark mode
             }
-            //---------
-            
-//            Button(action: {
-//                  showMailView.toggle()
-//                }) {
-//                  Text("Send mail")
-//                }
-//                .sheet(isPresented: $showMailView) {
-//                  MailView(data: $mailData) { result in
-//                    print(result)
-//                   }
-//                }
-//            .sheet(isPresented: $isShowingMailView) {
-//                        MailView(isShowing: self.$isShowingMailView, result: self.$result)
-//            }
-//            .sheet(isPresented: $emIsShow) {
-//                MailView(result: $emResult, recipient: ["vitorgomes_silva@outlook.com"], subject: "Test email", body: "Test body")
-//            }
-            
-//            Button(action: {self.emIsShow.toggle()})
-//                {Text("Email Us")}
-//                .sheet(isPresented: $emIsShow) {
-//                    MailView(result: $emResult, recipient: ["vitorgomes_silva@outlook.com"], subject: "test", body: "test")
-//                }
-
             // TODO: Add a Thank You message (Popup with fading animation maybe)
             Button {
                 // TODO: Add action to when tapped send an email to Church's email address
@@ -150,19 +121,6 @@ struct ChurchAppSuggestionsView: View {
         .navigationBarTitleDisplayMode(.inline)
         //.padding(.bottom, 16) TODO: Check if it will be necessary
     }
-    
-//    func sendEmail(emailText: String) {
-//        guard MFMailComposeViewController.canSendMail() else {
-//            print("Not possible to send email in this device")
-//            return
-//        }
-//        
-//        let mailComposeViewController = MFMailComposeViewController()
-//        mailComposeViewController.setMessageBody(emailText, isHTML: false)
-//        mailComposeViewController.mailComposeDelegate = self
-//        
-//        UIApplication.shared.windows.first?.rootViewController?.present(mailComposeViewController, animated: false, completion: nil)
-//    }
 }
 
 #Preview {
@@ -170,9 +128,3 @@ struct ChurchAppSuggestionsView: View {
         ChurchAppSuggestionsView(selectedArea: "church")
     }
 }
-
-//extension ChurchAndAppSuggestionsView: MFMailComposeViewControllerDelegate {
-//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-//        controller.dismiss(animated: false, completion: nil)
-//    }
-//}

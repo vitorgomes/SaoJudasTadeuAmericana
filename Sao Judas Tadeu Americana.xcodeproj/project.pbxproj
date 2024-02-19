@@ -10,7 +10,6 @@
 		E700EB822B6441E1004909EF /* ShareLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700EB812B6441E1004909EF /* ShareLinkView.swift */; };
 		E700EB842B644AA0004909EF /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700EB832B644A9F004909EF /* BackButtonView.swift */; };
 		E7122B5C2B44A04E00067632 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7122B5B2B44A04E00067632 /* SettingsView.swift */; };
-		E712823F2B81241E00DE40A6 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E712823E2B81241E00DE40A6 /* MailView.swift */; };
 		E71603F72B3CE917000E30F8 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71603F62B3CE917000E30F8 /* AboutView.swift */; };
 		E71757322B48C7AA005D9A20 /* NovenaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71757312B48C7A9005D9A20 /* NovenaView.swift */; };
 		E71757342B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71757332B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift */; };
@@ -44,7 +43,7 @@
 		E7BAF8F22B3E2A9B00DB6F21 /* SjtHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF8F12B3E2A9B00DB6F21 /* SjtHistoryView.swift */; };
 		E7BAF8F42B3E45C900DB6F21 /* PrayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */; };
 		E7C6CF102B6D73A00017B482 /* PrayersSongsNovenasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C6CF0F2B6D73A00017B482 /* PrayersSongsNovenasView.swift */; };
-		E7CD44462B8042780021745D /* EmailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CD44452B8042780021745D /* EmailSender.swift */; };
+		E7CABE162B82E44900A7EA07 /* ProgressVerticalLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CABE152B82E44900A7EA07 /* ProgressVerticalLineView.swift */; };
 		E7FE51502B7197FA00E1E573 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FE514F2B7197FA00E1E573 /* NotificationsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +51,6 @@
 		E700EB812B6441E1004909EF /* ShareLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLinkView.swift; sourceTree = "<group>"; };
 		E700EB832B644A9F004909EF /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		E7122B5B2B44A04E00067632 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		E712823E2B81241E00DE40A6 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		E71603F62B3CE917000E30F8 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		E71757312B48C7A9005D9A20 /* NovenaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovenaView.swift; sourceTree = "<group>"; };
 		E71757332B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCheckboxToggleStyle.swift; sourceTree = "<group>"; };
@@ -87,7 +85,7 @@
 		E7BAF8F12B3E2A9B00DB6F21 /* SjtHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SjtHistoryView.swift; sourceTree = "<group>"; };
 		E7BAF8F32B3E45C800DB6F21 /* PrayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersView.swift; sourceTree = "<group>"; };
 		E7C6CF0F2B6D73A00017B482 /* PrayersSongsNovenasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersSongsNovenasView.swift; sourceTree = "<group>"; };
-		E7CD44452B8042780021745D /* EmailSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSender.swift; sourceTree = "<group>"; };
+		E7CABE152B82E44900A7EA07 /* ProgressVerticalLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressVerticalLineView.swift; sourceTree = "<group>"; };
 		E7FE514F2B7197FA00E1E573 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +158,7 @@
 			children = (
 				E702908D2B68834C00F0FDB7 /* PrayersView */,
 				E71757312B48C7A9005D9A20 /* NovenaView.swift */,
+				E7CABE152B82E44900A7EA07 /* ProgressVerticalLineView.swift */,
 			);
 			path = PrayersViews;
 			sourceTree = "<group>";
@@ -179,8 +178,6 @@
 				E7FE514F2B7197FA00E1E573 /* NotificationsView.swift */,
 				E71D1DD32B45C47D00F55AF4 /* SuggestionsView.swift */,
 				E71D1DD52B45FB8600F55AF4 /* ChurchAppSuggestionsView.swift */,
-				E712823E2B81241E00DE40A6 /* MailView.swift */,
-				E7CD44452B8042780021745D /* EmailSender.swift */,
 				E74C957C2B7AE6E500FD9938 /* AboutAppView.swift */,
 			);
 			path = SettingsViews;
@@ -404,11 +401,9 @@
 			files = (
 				E7122B5C2B44A04E00067632 /* SettingsView.swift in Sources */,
 				E74489CD2B5083ED00039B0C /* MainView.swift in Sources */,
-				E712823F2B81241E00DE40A6 /* MailView.swift in Sources */,
 				E760CB1D2B6EAA0200656038 /* SettingsRowView.swift in Sources */,
 				E7BAF8F42B3E45C900DB6F21 /* PrayersView.swift in Sources */,
 				E74235322B6B25F2000A0CC8 /* ChevronToggleStyle.swift in Sources */,
-				E7CD44462B8042780021745D /* EmailSender.swift in Sources */,
 				E7B737252B76C2B1005A40B2 /* PrayersSongsNovenasRowView.swift in Sources */,
 				E7A396F52B3F67D300A3ADE7 /* TitheView.swift in Sources */,
 				E71757322B48C7AA005D9A20 /* NovenaView.swift in Sources */,
@@ -431,6 +426,7 @@
 				E71757342B48CBE3005D9A20 /* iOSCheckboxToggleStyle.swift in Sources */,
 				E71D1DD42B45C47D00F55AF4 /* SuggestionsView.swift in Sources */,
 				E7B808342B6057D300AF0AE2 /* SjtHistoryCircleImageView.swift in Sources */,
+				E7CABE162B82E44900A7EA07 /* ProgressVerticalLineView.swift in Sources */,
 				E74C957D2B7AE6E600FD9938 /* AboutAppView.swift in Sources */,
 				E700EB842B644AA0004909EF /* BackButtonView.swift in Sources */,
 				E7C6CF102B6D73A00017B482 /* PrayersSongsNovenasView.swift in Sources */,
