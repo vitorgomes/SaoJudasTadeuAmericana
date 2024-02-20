@@ -7,9 +7,25 @@
 
 import SwiftUI
 
+//struct DiagonalRectangle
+
 struct SplashScreenView: View {
+    
+    let screenSize = UIScreen.main.bounds
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack {
+                Text("Test")
+                    .rotationEffect(.degrees(303)) // TODO: Not elegant at all but working. Need to review this later to see if there is a better way to achive this
+            }
+            .frame(width: screenSize.width * 1, height: screenSize.width * 2)
+            //.clipShape(Rectangle())
+            .background(Color(.red))
+            .rotationEffect(.radians(1.0))
+        }
+        .frame(width: screenSize.width * 1, height: screenSize.height * 1)
+        .background(Color(.green)) // TODO: Color for tests purposes, change later
     }
 }
 
