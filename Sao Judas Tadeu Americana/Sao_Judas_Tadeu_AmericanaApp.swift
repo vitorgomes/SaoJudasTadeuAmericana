@@ -12,10 +12,12 @@ import SwiftData
 struct Sao_Judas_Tadeu_AmericanaApp: App {
     var body: some Scene {
         WindowGroup {
+//            NavigationStack {
+//                MainView()
+//            }
             NavigationStack {
-                MainView()
+                SplashScreenView()
             }
         }
-        //.modelContainer(for: Prayer.self)
     }
 }

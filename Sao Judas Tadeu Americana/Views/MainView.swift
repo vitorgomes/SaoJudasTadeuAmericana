@@ -36,12 +36,13 @@ struct MainView: View {
                 .tabItem {
                     Label("Configurações", systemImage: "gearshape.fill")
                 }
-        }.onAppear{
+        }
+        .navigationTitle("Início") // TODO: It is showing on all Views from the TabView, need to investigate
+        .onAppear{
             // TODO: Need to be moved to another Life Cycle modifier. It is here only for test purposes while build the Nofification functions
             notificationAuthorization()
             massHournotification()
         }
-        .navigationTitle("Início") // TODO: It is showing on all Views from the TabView, need to investigate
         .accentColor(.green) // TODO: Deprecated modifier after iOS 16. Need to create a AccentColor on Assets. Using green for test purposes
     }
 }
