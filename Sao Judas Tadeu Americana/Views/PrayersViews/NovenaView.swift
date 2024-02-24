@@ -34,12 +34,14 @@ struct NovenaView: View {
                 List {
                     Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh. Donec feugiat hendrerit lorem. Donec luctus libero a rutrum molestie. Quisque dictum euismod eros, sit amet luctus neque dignissim a. Fusce feugiat ut felis vitae congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse malesuada scelerisque mollis. Maecenas quis efficitur nisi. Phasellus quis viverra neque. Integer nec justo arcu. Proin scelerisque eu turpis sed sollicitudin. In scelerisque elit id metus hendrerit sollicitudin. Vivamus non lobortis libero. Donec ut scelerisque sapien. Aenean dignissim hendrerit diam at accumsan. Nullam euismod interdum est, quis sodales odio convallis id. Etiam nec placerat nisi.") // TODO: Replace Lorem Ipsum text
                 }
-                // TODO: Bellow .background and .scrollContentBackground modifiers are for tests purpose, remove later
-                .background(.red)
-                .scrollContentBackground(.hidden)
-                .padding(.bottom, 16 + buttonsHeight) // TODO: Need to discover why bottom is getting this white rectangle every time adds the buttonsHeight variable
+                .safeAreaInset(edge: .bottom) {
+                    Color.clear
+                        .frame(height: buttonsHeight + 8)
+                }
+                .padding(.bottom, 16)
                 .edgesIgnoringSafeArea(.bottom)
                 
+                // TODO: Refactor this later, since same Button was created two times
                 VStack(spacing: 8) {
                     Button {
                         // TODO: Add action to when tapped mark the check box of the day completed and return to previous screen
@@ -50,12 +52,12 @@ struct NovenaView: View {
                         }
                         .tint(.black)
                         .frame(width: screenSize.width * 0.65, height: 35)
-                        .background(Color(.green))
+                        .background(Color(.green)) // TODO: Change the color later
                         .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                     }
 
                     Button {
-                        
+                        // TODO: Add action to return previous screen
                     } label: {
                         HStack {
                             Image(systemName: "chevron.left") // TODO: Need to align with "Feito" checkmark.square SF Symbol
@@ -63,7 +65,7 @@ struct NovenaView: View {
                         }
                         .tint(.black)
                         .frame(width: screenSize.width * 0.65, height: 35)
-                        .background(Color(.green))
+                        .background(Color(.green)) // TODO: Change the color later
                         .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
                     }
                 }
@@ -71,10 +73,6 @@ struct NovenaView: View {
                     buttonsHeight = size.height
                     print(buttonsHeight) // TODO: Tests purpose, remove later
                 }
-                //.background(Color(.clear))
-                //.frame(width: 100)
-                //.background(Color(.red))
-                //.padding(.bottom, 16)
             }
             
             // MARK:  Chevron Toggle + Candle Toggles
@@ -198,7 +196,7 @@ struct NovenaView: View {
         }
         .padding(.top, 0.2)
         .navigationTitle("Novena X, Dia X")
-        .navigationBarTitleDisplayMode(.inline) // TODO: The tiny line bellow the title when user scroll up the list is not showing, need to investigate later
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 // TODO: Add functionality here

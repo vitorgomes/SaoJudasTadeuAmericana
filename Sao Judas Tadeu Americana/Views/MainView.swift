@@ -48,6 +48,7 @@ struct MainView: View {
 }
 
 // TODO: Move to a dedicated file and remove from MainView. I believe it is better to start the checks on SplashScreen
+// TODO: Add a notification based on MassesNotifications allowed that remember user to silence his phone before the Mass (if possible with a image when user tap the notification)
 extension MainView {
     func notificationAuthorization() {
         center.requestAuthorization(options: [.alert, .sound, .badge, .provisional]) { success, error in

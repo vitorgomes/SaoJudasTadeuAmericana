@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
-//import SwiftData
 
 struct PrayersSongsNovenasView: View {
     var body: some View {
         List {
+            // TODO: Add a Searchbar
             ForEach(prayersSongsNovenasRowContents) { item in
                 PrayersSongsNovenasRowView(userSelection: "Orações", prayersSongsNovenasRowContent: item)
             }
-            
-            
+
             HStack {
                 Text("🎵")
                     .font(.title)
