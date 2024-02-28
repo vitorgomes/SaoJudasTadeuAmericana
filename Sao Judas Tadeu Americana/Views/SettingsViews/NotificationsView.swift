@@ -45,8 +45,9 @@ struct NotificationsView: View {
                     .paddingLeadingAndTrailing()
                 
                 HStack {
-//                    Text("Quanto tempo antes?")
-//                        .foregroundStyle(massesNotifications ? .blackAndWhite : .gray)
+                    Text("Quanto tempo antes?")
+                        .foregroundStyle(massesNotifications ? .blackAndWhite : .gray)
+                        .disabled(massesNotifications == false)
                     
                     Spacer()
                     
@@ -98,6 +99,7 @@ struct NotificationsView: View {
                 
                 DatePicker("Horário", selection: $selectedNovenaHour, displayedComponents: .hourAndMinute)
                     .disabled(novenasNotifications == false)
+                    .opacity(novenasNotifications ? 1.0 : 0.5)
                     .foregroundStyle(novenasNotifications ? .blackAndWhite : .gray)
                     .tint(.blackAndWhite)
                     .paddingLeadingAndTrailing()
