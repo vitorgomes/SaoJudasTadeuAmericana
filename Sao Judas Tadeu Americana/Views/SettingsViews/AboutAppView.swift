@@ -40,6 +40,24 @@ struct AboutAppView: View {
             HStack {
                 Spacer()
                 
+                Image(systemName: "questionmark.circle")
+                Text("Ajuda")
+                
+                Spacer()
+            }
+            
+            HStack {
+                Spacer()
+                
+                Image(systemName: "square.and.arrow.up")
+                Text("Compartilhar o Applicativo")
+                
+                Spacer()
+            }
+            
+            HStack {
+                Spacer()
+                
                 Text("🙏")
                     .font(.system(size: 56))
                 
