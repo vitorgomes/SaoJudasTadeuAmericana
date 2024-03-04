@@ -14,13 +14,13 @@ struct PrayersView: View {
         VStack { // TODO: Add font styles
             // TODO: Add maxWidth too
             ForEach(viewTexts) { item in
-                if(item == viewTexts.last) {
+                if (item == viewTexts.last) {
                     PrayersRoundedRectangleView(prayersRoundedRectangleText: item)
                         .overlayedPulsingFireAnimation(paddingSize: 24)
                 } else {
                     PrayersRoundedRectangleView(prayersRoundedRectangleText: item)
+                    Spacer()
                 }
-                Spacer()
             }
         }
         .navigationTitle("Orações")
