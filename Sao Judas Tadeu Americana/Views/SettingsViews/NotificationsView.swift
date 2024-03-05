@@ -27,8 +27,13 @@ struct NotificationsView: View {
     @State private var psalmsNotifications = true
     @State private var selectedpsalmsPeriodNotifications = ""
     
+    // Silent mode contants and variables
+    @State private var silentModeNotifications = true
+    @State private var silentModeOn = true
+    @State private var silentModeOff = true
+    
     var body: some View {
-        VStack { // TODO: Maybe it will need to be a ScrollView, depending of the description text lenght
+        ScrollView { // TODO: Maybe it will need to be a ScrollView, depending of the description text lenght
             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies laoreet pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean eget lectus nibh.")
                 .padding(.bottom, 8)
             
@@ -135,6 +140,25 @@ struct NotificationsView: View {
                 }
                 .paddingLeadingAndTrailing()
                 .padding(.bottom, 16)
+            }
+            .border(Color.black) // TODO: Need to implement color for dark mode
+            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+            
+            // Silent and Lower Volume
+            VStack {
+                HStack {
+                    Text("Modo Silencioso")
+                        .font(.title)
+                    Spacer()
+                }
+                
+                Toggle("Notificar sobre Modo Silencioso?", isOn: $silentModeNotifications)
+                
+                Toggle("Notificar quando ativo?", isOn: $silentModeOn)
+                    .disabled(silentModeNotifications == false)
+                
+                Toggle("Notificar quando desativado?", isOn: $silentModeOff)
+                    .disabled(silentModeNotifications == false)
             }
             .border(Color.black) // TODO: Need to implement color for dark mode
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
