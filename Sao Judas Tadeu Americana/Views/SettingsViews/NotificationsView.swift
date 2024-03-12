@@ -151,14 +151,19 @@ struct NotificationsView: View {
                         .font(.title)
                     Spacer()
                 }
+                .padding([.leading, .top], 16)
                 
                 Toggle("Notificar sobre Modo Silencioso?", isOn: $silentModeNotifications)
+                    .paddingLeadingAndTrailing()
                 
                 Toggle("Notificar quando ativo?", isOn: $silentModeOn)
                     .disabled(silentModeNotifications == false)
+                    .paddingLeadingAndTrailing()
                 
                 Toggle("Notificar quando desativado?", isOn: $silentModeOff)
                     .disabled(silentModeNotifications == false)
+                    .paddingLeadingAndTrailing()
+                    .padding(.bottom, 16)
             }
             .border(Color.black) // TODO: Need to implement color for dark mode
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
